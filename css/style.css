@@ -1,8 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+font-family: Arial, sans-serif;
+line-height: 1.6;
 }
-h1 {
-    color: #2c3e50;
+
+.container {
+width: 90%;
+margin: auto;
+}
+
+header {
+background: #0f3b2e;
+padding: 15px 0;
+}
+
+header .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo img {
+height: 70px;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin-left: 25px;
+font-weight: bold;
+}
+
+.hero {
+height: 85vh;
+background: linear-gradient(
+rgba(15,59,46,0.75),
+rgba(15,59,46,0.75)
+),
+url('../images/hero.jpg');
+
+```
+background-size: cover;
+background-position: center;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+text-align: center;
+color: white;
+```
+
+}
+
+.hero-content {
+max-width: 900px;
+}
+
+.hero h1 {
+font-size: 3rem;
+margin-bottom: 20px;
+}
+
+.tagline {
+color: gold;
+font-size: 1.3rem;
+margin-bottom: 20px;
+}
+
+.btn {
+display: inline-block;
+margin-top: 25px;
+padding: 12px 24px;
+background: gold;
+color: #0f3b2e;
+text-decoration: none;
+font-weight: bold;
 }
