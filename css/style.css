@@ -922,3 +922,44 @@ footer {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+
+.manufacturing-grid,
+.why-grid {
+    display: grid;
+    gap: 40px;
+}
+
+.manufacturing-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.why-grid {
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 50px;
+}
+
+.why-card {
+    padding: 40px 30px;
+    text-align: center;
+    background: rgba(26,74,46,0.25);
+    border: 1px solid rgba(201,168,76,0.15);
+    transition: all 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+}
+
+.why-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.why-card h3 {
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+.why-card p {
+    color: var(--text-light);
+}
