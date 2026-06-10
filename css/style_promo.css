@@ -20,37 +20,37 @@
 }
 
 body {
-font-family: 'Montserrat', sans-serif;
-background: var(--green-mid);
-color: var(--white);
-overflow-x: hidden;
-line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
+  background: var(--green-dark);
+  color: var(--white);
+  overflow-x: hidden;
+  line-height: 1.6;
 }
 
 /* ── HEADER / NAV ── */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background: rgba(13,43,26,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(201,168,76,0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(13,43,26,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201,168,76,0.2);
 }
 
 header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 60px;
-    width: 100%;
-    max-width: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 60px;
+  width: 100%;
+  max-width: none;
 }
 
 .logo img {
-    height: 200px;
-    width: auto;
+  height: 58px;
+  width: auto;
 }
 
 nav {
@@ -60,8 +60,8 @@ nav {
 }
 
 header nav a {
-  font-size: 18px;
-  font-weight: 800;
+  font-size: 11.5px;
+  font-weight: 600;
   letter-spacing: 1.6px;
   text-transform: uppercase;
   color: rgba(255,255,255,0.78);
@@ -76,38 +76,38 @@ header nav a:hover {
 
 /* ── HERO ── */
 .hero {
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-    padding: 120px 40px 80px;
-    background:none;    
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 120px 40px 80px;
+  background: none;
 }
 
 .hero-bg {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    background:
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
     radial-gradient(ellipse 80% 60% at 50% 40%, rgba(45,106,71,0.35) 0%, transparent 70%),
     radial-gradient(circle at 10% 80%, rgba(201,168,76,0.08) 0%, transparent 40%),
     radial-gradient(circle at 90% 20%, rgba(201,168,76,0.06) 0%, transparent 35%),
     linear-gradient(160deg, #0a1f11 0%, #0d2b1a 40%, #142d1e 70%, #0a1a0f 100%);
-
 }
+
 .hero-grid {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 3px;
-    opacity: 0.18;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3px;
+  opacity: 0.18;
 }
 
 .hero-grid div { background-size: cover; background-position: center; }
@@ -119,10 +119,10 @@ header nav a:hover {
 .hero-grid div:nth-child(6) { background: linear-gradient(135deg, #0d2b1a, #1a4a2e); }
 
 .hero-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    background: linear-gradient(to bottom, rgba(13,43,26,0.6) 0%, rgba(13,43,26,0.3) 50%, rgba(13,43,26,0.8) 100%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(to bottom, rgba(13,43,26,0.6) 0%, rgba(13,43,26,0.3) 50%, rgba(13,43,26,0.8) 100%);
 }
 
 .wood-texture {
@@ -136,19 +136,19 @@ header nav a:hover {
 }
 
 .hero-content {
-    position: relative;
-    z-index: 5;
-    max-width: 900px;
+  position: relative;
+  z-index: 5;
+  max-width: 900px;
 }
 
 .hero-badge {
-    display: inline-block;
-    align-items: center;
-    gap: 10px;
-    border: 1px solid rgba(201,168,76,0.4);
-    padding: 8px 20px;
-    margin-bottom: 36px;
-    border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(201,168,76,0.4);
+  padding: 8px 20px;
+  margin-bottom: 36px;
+  border-radius: 2px;
 }
 
 .hero-badge span {
@@ -211,8 +211,8 @@ header nav a:hover {
   display: inline-block;
   background: var(--gold);
   color: var(--green-dark);
-  padding: 10px 30px;
-  font-size: 15px;
+  padding: 16px 38px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.8px;
   text-transform: uppercase;
@@ -572,7 +572,7 @@ section {
 
 .species-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   margin-top: 50px;
 }
@@ -586,10 +586,7 @@ section {
   transition: transform 0.4s;
 }
 
-.species-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
-}
+.species-card:hover { transform: scale(1.03); }
 
 .species-bg {
   position: absolute;
@@ -598,65 +595,13 @@ section {
   align-items: flex-end;
 }
 
-.pine .species-bg {
-    background: linear-gradient(
-        160deg,
-        #d8b36b,
-        #b67a2f
-    );
-}
-
-.white-ash .species-bg {
-    background: linear-gradient(
-        160deg,
-        #efe4d1,
-        #cab49a
-    );
-}
-
-.steam-beech .species-bg {
-    background: linear-gradient(
-        160deg,
-        #e6cfba,
-        #c59d7f
-    );
-}
-
-.white-oak .species-bg {
-    background: linear-gradient(160deg, #d8c4a8, #b69474);
-}
-
-.european-oak .species-bg {
-    background: linear-gradient(160deg, #c8ae8b, #9d7854);
-}
-
-.teak .species-bg {
-    background: linear-gradient(160deg, #b8793d, #7a4b1c);
-}
-
-.cumaru .species-bg {
-    background: linear-gradient(160deg, #8b5a2b, #5e3a18);
-}
-
-.sapele .species-bg {
-    background: linear-gradient(160deg, #9b5b3a, #6a3d28);
-}
-
-.maple .species-bg {
-    background: linear-gradient(160deg, #f0dec4, #d2b48c);
-}
-
-.walnut .species-bg {
-    background: linear-gradient(160deg, #6b4a34, #3f291d);
-}
-
-.syp .species-bg {
-    background: linear-gradient(160deg, #d2a55a, #a9742a);
-}
-
-.cherry .species-bg {
-    background: linear-gradient(160deg, #f4c2b0, #d98a6a);
-}
+.species-card:nth-child(1) .species-bg { background: linear-gradient(160deg, #c8b8a0, #a08060); }
+.species-card:nth-child(2) .species-bg { background: linear-gradient(160deg, #d4c4a8, #b09070); }
+.species-card:nth-child(3) .species-bg { background: linear-gradient(160deg, #c0a880, #907050); }
+.species-card:nth-child(4) .species-bg { background: linear-gradient(160deg, #b8a888, #887058); }
+.species-card:nth-child(5) .species-bg { background: linear-gradient(160deg, #a07830, #705018); }
+.species-card:nth-child(6) .species-bg { background: linear-gradient(160deg, #d8c090, #b09050); }
+.species-card:nth-child(7) .species-bg { background: linear-gradient(160deg, #e8d0a0, #c0a060); }
 
 .species-info {
   position: absolute;
@@ -667,7 +612,7 @@ section {
 
 .species-name {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--white);
 }
@@ -681,27 +626,13 @@ section {
 }
 
 .wood-grain {
-    position: absolute;
-    inset: 0;
-    opacity: 0.18;
-
-    background:
-        repeating-linear-gradient(
-            85deg,
-            transparent 0px,
-            transparent 8px,
-            rgba(0,0,0,0.08) 9px,
-            rgba(255,255,255,0.05) 10px,
-            transparent 11px
-        ),
-
-        repeating-linear-gradient(
-            92deg,
-            transparent 0px,
-            transparent 22px,
-            rgba(0,0,0,0.05) 23px,
-            transparent 24px
-        );
+  position: absolute;
+  inset: 0;
+  opacity: 0.3;
+  background-image: repeating-linear-gradient(
+    82deg, transparent 0px, transparent 8px,
+    rgba(0,0,0,0.06) 8px, rgba(0,0,0,0.06) 9px
+  );
 }
 
 /* ── SOURCING / MAP ── */
@@ -843,7 +774,6 @@ section {
   color: var(--gold);
   text-transform: uppercase;
 }
-
 
 /* ── FOOTER ── */
 footer {
