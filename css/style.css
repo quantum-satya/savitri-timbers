@@ -271,21 +271,22 @@ header nav a.active::after {
   display: flex;
   justify-content: center;
   gap: 80px;
+  padding:0 20px;
 }
 
 .stat { text-align: center; }
 
 .stat-num {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 38px;
+  font-size: 22px;
   font-weight: 600;
   color: var(--gold);
   line-height: 1;
 }
 
 .stat-label {
-  font-size: 9px;
-  letter-spacing: 2px;
+  font-size: 8px;
+  letter-spacing: 1.5px;
   color: var(--text-light);
   text-transform: uppercase;
   margin-top: 6px;
@@ -297,6 +298,40 @@ header nav a.active::after {
   align-self: stretch;
 }
 
+/* ── MOBILE FIX ── */
+@media (max-width: 768px) {
+  .hero-stats {
+    position: static;          /* absolute से हटाया — flow में आया */
+    margin-top: 48px;          /* hero-content के नीचे space */
+    gap: 0;                    /* gap हटाया, divider से handle होगा */
+    flex-wrap: nowrap;
+    padding: 16px 20px;
+    background: rgba(13,43,26,0.5);   /* हल्का dark background */
+    border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 4px;
+  }
+
+  .stat {
+    flex: 1;                   /* तीनों stats बराबर चौड़ाई */
+    padding: 8px 4px;
+  }
+
+  .stat-num {
+    font-size: 16px;           /* mobile पर छोटा */
+    letter-spacing: 0.5px;
+  }
+
+  .stat-label {
+    font-size: 7px;
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+
+  .stat-div {
+    width: 1px;
+    margin: 8px 0;             /* ऊपर-नीचे थोड़ी space */
+  }
+}  
 /* ── SECTION COMMONS ── */
 section {
   padding: 100px 60px;
@@ -395,7 +430,7 @@ section {
   font-weight: 300;
 }
 
-/* ── OUR STORY ── */
+/* ── OUR STORY ── DESKTOP */
 .story {
   background: linear-gradient(135deg, #0a1f11 0%, #0d2b1a 100%);
   display: grid;
@@ -457,6 +492,49 @@ section {
   margin-bottom: 16px;
 }
 
+/* ── MOBILE FIX ── */
+@media (max-width: 768px) {
+
+  /* Section ka padding kam kiya */
+  section {
+    padding: 60px 24px;
+  }
+
+  /* Story section: 2 column se 1 column */
+  .story {
+    grid-template-columns: 1fr;   /* dono columns ek ke neeche ek */
+    gap: 80px;                    /* image aur text ke beech space —
+                                     overlay ke liye jagah chahiye */
+  }
+
+  /* Image block ko thoda chhota kiya */
+  .about-img-main {
+    aspect-ratio: 3/2;            /* lambi image mobile par achhi nahi lagti */
+  }
+
+  /* Overlay image: position theek ki */
+  .about-img-overlay {
+    bottom: -32px;                /* thoda aur neeche */
+    right: 16px;                  /* right edge se andar */
+    width: 48%;                   /* thodi chhoti */
+    border: 3px solid var(--green-dark);
+  }
+
+  /* Heading font thodi chhoti */
+  .story h2 {
+    font-size: 28px;
+  }
+
+  /* Paragraph font readable size */
+  .story p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+}
+
+
+
 .pillars {
   display: flex;
   flex-direction: column;
@@ -493,7 +571,7 @@ section {
   margin-bottom: 0;
 }
 
-/* ── WHAT WE DO / SERVICES ── */
+/* ── WHAT WE DO / SERVICES ── DESKTOP */
 .services {
   background: var(--green-dark);
   text-align: center;
@@ -512,7 +590,7 @@ section {
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* Teen columns side by side */
   gap: 24px;
   margin-top: 60px;
   justify-content: center;
@@ -568,6 +646,100 @@ section {
   color: var(--text-light);
   line-height: 1.8;
   font-weight: 300;
+}
+
+/* ── MOBILE FIX ── */
+@media (max-width: 768px) {
+
+  /* Section ka padding kam kiya —
+     100px zyada tha, mobile par 60px kaafi hai */
+  .services {
+    padding: 60px 20px;
+  }
+
+  /* Heading ki size thodi kam ki —
+     clamp() mobile par bhi badi ho sakti thi */
+  .services h2 {
+    font-size: 28px;
+    max-width: 100%; /* Puri width use karo mobile par */
+  }
+
+  /* Section-sub text ko left align kiya —
+     Mobile par centered text padhna mushkil lagta hai */
+  .services .section-sub {
+    text-align: left;
+    margin: 16px 0 0 0; /* Auto margin hataya, left se shuru */
+  }
+
+  /* Teen columns se ek column —
+     Mobile par teen cards side by side nahi aate,
+     isliye ek ke neeche ek kiya */
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;          /* Gap bhi kam kiya — space bachane ke liye */
+    margin-top: 36px;   /* Upar ka margin bhi kam kiya */
+  }
+
+  /* Card ka padding kam kiya —
+     44px bahut zyada tha chhoti screen par */
+  .service-card {
+    padding: 28px 24px;
+    text-align: left; /* Text left hi rahe */
+  }
+
+  /* Icon thoda chhota kiya */
+  .service-icon {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+
+  /* Card heading chhoti ki */
+  .service-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  /* Paragraph font readable rakhi */
+  .service-card p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* Hover effect mobile par band kiya —
+     Mobile mein hover nahi hota, touch hota hai.
+     translateY se card upar uthta tha jo mobile par
+     achha nahi lagta */
+  .service-card:hover {
+    transform: none;
+    background: rgba(26,74,46,0.25);
+  }
+
+}
+
+/* ── Contact page: 4 cards → 4 columns (desktop) ── */
+.services--contact .service-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ══════════════════════════════════════
+   768px — Tablet: 4 → 2 columns
+   ══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .services--contact .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 36px;
+  }
+}
+
+/* ══════════════════════════════════════
+   480px — Mobile: 2 → 1 column
+   ══════════════════════════════════════ */
+@media (max-width: 480px) {
+  .services--contact .service-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 }
 
 /* ── SPECIES ── */
@@ -767,7 +939,7 @@ section {
   color: var(--gold);
 }
 
-/* ── MANUFACTURING ── */
+/* ── MANUFACTURING ── DESKTOP */
 .manufacturing {
   background: linear-gradient(135deg, var(--walnut) 0%, #2a1505 100%);
   display: grid;
@@ -810,6 +982,7 @@ section {
 .mfg-visual-inner { text-align: center; }
 .mfg-visual-inner .big-icon { font-size: 64px; opacity: 0.4; }
 
+/* Mfg features — 2x2 grid desktop par */
 .mfg-features {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -840,6 +1013,76 @@ section {
   font-weight: 300;
   max-width: none;
   text-align: left;
+}
+
+/* ── MOBILE FIX ── */
+@media (max-width: 768px) {
+
+  /* Do column se ek column —
+     Text pehle, visual baad mein */
+  .manufacturing {
+    grid-template-columns: 1fr;
+    gap: 40px;              /* Gap kam kiya — do sections ke beech */
+    padding: 60px 20px;     /* Section padding kam ki */
+  }
+
+  /* Visual ko text ke baad dikhana hai —
+     HTML mein visual doosre number par hai,
+     isliye order: 2 diya — natural order sahi hai */
+  .mfg-visual {
+    order: 2;               /* Visual neeche rahega */
+    aspect-ratio: 16/9;     /* Mobile par lambi height avoid ki —
+                               4/3 se 16/9 kiya, thoda납작 */
+  }
+
+  /* Text wala div pehle dikhega */
+  .manufacturing > div:first-child {
+    order: 1;               /* Text upar rahega */
+  }
+
+  /* Heading font mobile par chhoti */
+  .manufacturing h2 {
+    font-size: 28px;
+  }
+
+  /* Paragraph max-width hataya —
+     Mobile par full width use hogi */
+  .manufacturing p {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  /* Features grid — 2 column se 1 column —
+     Mobile par 2 column cramped lagta hai */
+  .mfg-features {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  /* Feature card ka padding thoda kam kiya */
+  .mfg-feat {
+    padding: 16px 14px;
+  }
+
+  /* Feature heading letter-spacing thodi kam ki —
+     Chhoti screen par zyada spacing crowded lagti hai */
+  .mfg-feat h5 {
+    letter-spacing: 1px;
+    font-size: 10px;
+  }
+
+  /* Visual ke andar icon chhota kiya */
+  .mfg-visual-inner .big-icon {
+    font-size: 44px;
+  }
+
+  /* Visual ke andar heading chhoti ki */
+  .mfg-visual-inner h3 {
+    font-size: 22px !important; /* inline style override karne ke liye */
+    margin-top: 12px !important;
+  }
+
 }
 
 .location-badge {
@@ -936,6 +1179,137 @@ footer {
   text-transform: uppercase;
 }
 
+/* ══════════════════════════════════════
+   footer- MOBILE RESPONSIVE — 768px से छोटी screen
+   ══════════════════════════════════════ */
+@media (max-width: 768px) {
+  
+  /* Footer का padding कम करें — mobile पर 60px बहुत ज़्यादा है */
+  footer {
+    padding: 40px 20px 28px;
+  }
+
+  /* 4 columns को single column में बदलें */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin-bottom: 36px;
+  }
+
+  /* Brand section को center करें */
+  .footer-brand {
+    text-align: center;
+  }
+
+  .footer-brand h3 {
+    font-size: 28px !important; /* inline style को override करें */
+    margin-bottom: 12px !important;
+  }
+
+  /* Footer bottom को stack करें */
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+   /* ── Logo को mobile पर सही size दें ── */
+  .footer-brand img {
+    height: 100px; /* desktop default */
+  }
+
+  /* ── Products list में bullets नहीं चाहिए ── */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  }
+
+/* ── Contact items में थोड़ा spacing ── */
+.footer-contact-item {
+  margin-bottom: 10px;
+  }
+
+.contact-text {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+  }  
+
+  /* ── Footer bottom row ── */
+.footer-bottom {
+  border-top: 1px solid rgba(201,168,76,0.15);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* छोटी screen पर दोनों items नीचे-ऊपर हों */
+  gap: 10px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  }
+
+.footer-tagline {
+  color: rgba(201,168,76,0.6);
+  font-style: italic;
+  font-size: 12px;
+  }
+  /* ══════════════════════════════════════
+   768px — Tablet और छोटी screens
+   ══════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Padding घटाएं — 60px mobile पर बहुत ज़्यादा है */
+  footer {
+    padding: 40px 20px 28px;
+  }
+
+  /* 4 columns → single column */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  /* Brand section center करें */
+  .footer-brand {
+    text-align: center;
+  }
+
+  /* Logo थोड़ा छोटा करें */
+  .footer-brand img {
+    height: 75px;
+    margin-bottom: 14px !important;
+  }
+
+  /* Footer bottom stack करें */
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+  }
+}
+
+/* ══════════════════════════════════════
+   480px — पुराने और छोटे phones
+   ══════════════════════════════════════ */
+@media (max-width: 480px) {
+
+  footer {
+    padding: 28px 16px 20px;
+  }
+
+  .footer-top {
+    gap: 24px;
+  }
+
+  /* Logo और छोटा करें */
+  .footer-brand img {
+    height: 60px;
+  }
+}
+}
+
 .manufacturing-grid,
 .why-grid {
     display: grid;
@@ -946,35 +1320,112 @@ footer {
     grid-template-columns: 1fr 1fr;
 }
 
+/* ── WHY CHOOSE US — DESKTOP ── */
+
 .why-grid {
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Chaar cards ek line mein */
+    gap: 32px;
+    margin-top: 60px;
 }
 
 .why-card {
-    padding: 40px 30px;
+    padding: 44px 24px;
     text-align: center;
     background: rgba(26,74,46,0.25);
     border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 3px;
     transition: all 0.3s ease;
 }
 
 .why-card:hover {
-    transform: translateY(-5px);
+    background: rgba(45,106,71,0.3);
+    transform: translateY(-4px);
 }
 
 .why-icon {
-    font-size: 40px;
-    margin-bottom: 20px;
+    font-size: 28px;
+    color: var(--gold);
+    margin-bottom: 16px;
 }
 
 .why-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
     color: var(--white);
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .why-card p {
+    font-size: 13.5px;
+    line-height: 1.8;
     color: var(--text-light);
+    font-weight: 300;
+}
+/* ── MOBILE FIX ── */
+@media (max-width: 768px) {
+
+  /* Chaar column se do column —
+     Chaar cards ek line mein mobile par nahi aate,
+     2x2 grid zyada readable hai */
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;          /* Gap kam kiya — space bachane ke liye */
+    margin-top: 36px;   /* Upar ka margin bhi kam kiya */
+  }
+
+  /* Card ka padding kam kiya —
+     44px bahut zyada tha mobile par */
+  .why-card {
+    padding: 28px 16px;
+  }
+
+  /* Hover effect mobile par band kiya —
+     Touch screen par hover achha nahi lagta */
+  .why-card:hover {
+    transform: none;
+    background: rgba(26,74,46,0.2);
+  }
+
+  /* Icon thoda chhota kiya */
+  .why-icon {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  /* Card heading chhoti ki */
+  .why-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  /* Paragraph font thodi chhoti */
+  .why-card p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+}
+
+/* ── BAHUT CHHOTI SCREEN — 360px se kam ── */
+@media (max-width: 400px) {
+
+  /* Bahut chhoti screen par 2 column bhi tight lagte hain —
+     Ek column kar do */
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-card {
+    padding: 24px 16px;
+    text-align: left; /* Ek column mein left align zyada readable */
+  }
+
+  .why-icon {
+    font-size: 20px;
+  }
+
 }
 
 @media (max-width: 768px) {
