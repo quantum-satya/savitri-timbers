@@ -1508,3 +1508,243 @@ footer {
     line-height: 1.8;
     font-weight: 300;
 }
+
+/* ===================================================
+   Phase 2B.5 - Homepage Visual Polish
+=================================================== */
+
+.btn,
+.btn-primary,
+.btn-outline {
+    min-height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 30px;
+    font-size: 11px;
+    line-height: 1.2;
+    letter-spacing: 1.6px;
+    text-decoration: none;
+    transition: none;
+}
+
+.btn:hover,
+.btn-primary:hover {
+    transform: none;
+}
+
+.hero {
+    padding: 150px 40px 96px;
+}
+
+.hero-content {
+    width: min(100%, 1040px);
+}
+
+.hero h1 {
+    font-size: clamp(46px, 5.2vw, 74px);
+    margin-bottom: 22px;
+}
+
+.hero-content > p:not(.tagline) {
+    max-width: 700px;
+    margin-bottom: 38px;
+}
+
+.hero-buttons {
+    gap: 14px;
+}
+
+.hero-value-cards,
+.why-grid,
+.mfg-features {
+    gap: 18px;
+}
+
+.hero-value-card,
+.why-card,
+.mfg-feat {
+    background: rgba(13,43,26,0.52);
+    border: 1px solid rgba(201,168,76,0.18);
+    border-top: 2px solid rgba(201,168,76,0.42);
+    box-shadow: 0 18px 42px rgba(0,0,0,0.14);
+}
+
+.hero-value-card {
+    min-height: 142px;
+    padding: 24px 22px;
+    border-left: 1px solid rgba(201,168,76,0.18);
+}
+
+.why-us,
+.species,
+.sourcing,
+.manufacturing,
+.contact-cta {
+    padding-top: 112px;
+    padding-bottom: 112px;
+}
+
+.section-title,
+.species h2,
+.sourcing h2,
+.manufacturing h2,
+.sports-flooring h2 {
+    letter-spacing: 0;
+}
+
+.section-sub,
+.sourcing p,
+.manufacturing p,
+.sports-flooring .section-intro,
+.contact-cta p {
+    max-width: 680px;
+}
+
+.why-card {
+    min-height: 220px;
+    padding: 34px 28px;
+}
+
+.why-card h3,
+.hero-value-card h3,
+.mfg-feat h5 {
+    letter-spacing: 1.4px;
+}
+
+.sports-flooring {
+    padding-top: 118px;
+    padding-bottom: 118px;
+}
+
+.sports-image img {
+    border-radius: 3px;
+    box-shadow: 0 28px 70px rgba(0,0,0,0.32);
+}
+
+.sports-features {
+    gap: 10px;
+}
+
+.feature-item,
+.country-grid div {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.species-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 44px;
+}
+
+.species-card {
+    aspect-ratio: 4 / 5;
+    cursor: default;
+    transition: none;
+    border: 1px solid rgba(201,168,76,0.18);
+    box-shadow: 0 22px 50px rgba(0,0,0,0.18);
+}
+
+.species-card:hover {
+    transform: none;
+    box-shadow: 0 22px 50px rgba(0,0,0,0.18);
+}
+
+.species-name {
+    font-size: 26px;
+    line-height: 1.08;
+}
+
+.sourcing .container,
+.contact-cta .container {
+    max-width: 980px;
+}
+
+.country-grid {
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.manufacturing-grid {
+    align-items: center;
+    gap: 56px;
+}
+
+.mfg-visual {
+    border: 1px solid rgba(201,168,76,0.18);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+}
+
+@media (max-width: 900px) {
+    .hero {
+        padding: 124px 24px 72px;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 11vw, 58px);
+    }
+
+    .hero-value-cards,
+    .why-grid,
+    .species-grid,
+    .manufacturing-grid,
+    .sports-flooring-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-us,
+    .species,
+    .sourcing,
+    .manufacturing,
+    .sports-flooring,
+    .contact-cta {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    .hero-value-card,
+    .why-card {
+        min-height: auto;
+    }
+
+    .species-grid {
+        gap: 16px;
+    }
+
+    .species-card {
+        aspect-ratio: 16 / 10;
+    }
+}
+
+@media (max-width: 520px) {
+    .btn,
+    .btn-primary,
+    .btn-outline {
+        width: 100%;
+        padding: 13px 18px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+    }
+
+    .tagline {
+        letter-spacing: 2px;
+    }
+
+    .hero-value-card,
+    .why-card,
+    .mfg-feat {
+        padding: 20px 18px;
+    }
+
+    .section-title,
+    .species h2,
+    .sourcing h2,
+    .manufacturing h2,
+    .sports-flooring h2 {
+        font-size: 32px;
+    }
+}
