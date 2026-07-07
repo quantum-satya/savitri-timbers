@@ -74,11 +74,13 @@ header nav a:hover {
   color: var(--gold);
 }
 
-header nav a.active {
+header nav a.active,
+header nav a[aria-current="page"] {
     color: var(--gold);
 }
 
-header nav a.active::after {
+header nav a.active::after,
+header nav a[aria-current="page"]::after {
     content: '';
     display: block;
     width: 100%;
@@ -279,7 +281,7 @@ header nav a.active::after {
   text-align: left;
 }
 
-.hero-value-card h3 {
+.hero-value-card h2 {
   font-size: 11px;
   letter-spacing: 1.7px;
   text-transform: uppercase;
@@ -730,6 +732,16 @@ section {
   margin-bottom: 12px;
 }
 
+.species-title-accent {
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+}
+
+.species-sub {
+  margin-top: 12px;
+}
+
 .species-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -972,7 +984,7 @@ section {
   border-radius: 2px;
 }
 
-.mfg-feat h5 {
+.mfg-feat h3 {
   font-size: 10px;
   letter-spacing: 1.5px;
   color: var(--gold);
@@ -1042,7 +1054,7 @@ section {
 
   /* Feature heading letter-spacing thodi kam ki —
      Chhoti screen par zyada spacing crowded lagti hai */
-  .mfg-feat h5 {
+  .mfg-feat h3 {
     letter-spacing: 1px;
     font-size: 10px;
   }
@@ -1097,12 +1109,17 @@ footer {
   font-weight: 300;
 }
 
-.footer-col h5 {
+.footer-col h2 {
   font-size: 10px;
   letter-spacing: 2.5px;
   color: var(--gold);
   text-transform: uppercase;
   font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  height: 100px;
   margin-bottom: 20px;
 }
 
@@ -1154,110 +1171,26 @@ footer {
   text-transform: uppercase;
 }
 
-/* ══════════════════════════════════════
-   footer- MOBILE RESPONSIVE — 768px से छोटी screen
-   ══════════════════════════════════════ */
 @media (max-width: 768px) {
-  
-  /* Footer का padding कम करें — mobile पर 60px बहुत ज़्यादा है */
   footer {
     padding: 40px 20px 28px;
   }
 
-  /* 4 columns को single column में बदलें */
-  .footer-top {
-    grid-template-columns: 1fr;
-    gap: 36px;
-    margin-bottom: 36px;
-  }
-
-  /* Brand section को center करें */
-  .footer-brand {
-    text-align: center;
-  }
-
-  .footer-brand h3 {
-    font-size: 28px !important; /* inline style को override करें */
-    margin-bottom: 12px !important;
-  }
-
-  /* Footer bottom को stack करें */
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-    gap: 8px;
-  }
-
-   /* ── Logo को mobile पर सही size दें ── */
-  .footer-brand img {
-    height: 100px; /* desktop default */
-  }
-
-  /* ── Products list में bullets नहीं चाहिए ── */
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  }
-
-/* ── Contact items में थोड़ा spacing ── */
-.footer-contact-item {
-  margin-bottom: 10px;
-  }
-
-.contact-text {
-  font-size: 13px;
-  color: rgba(255,255,255,0.5);
-  line-height: 1.6;
-  }  
-
-  /* ── Footer bottom row ── */
-.footer-bottom {
-  border-top: 1px solid rgba(201,168,76,0.15);
-  padding-top: 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; /* छोटी screen पर दोनों items नीचे-ऊपर हों */
-  gap: 10px;
-  font-size: 12px;
-  color: rgba(255,255,255,0.35);
-  }
-
-.footer-tagline {
-  color: rgba(201,168,76,0.6);
-  font-style: italic;
-  font-size: 12px;
-  }
-  /* ══════════════════════════════════════
-   768px — Tablet और छोटी screens
-   ══════════════════════════════════════ */
-@media (max-width: 768px) {
-
-  /* Padding घटाएं — 60px mobile पर बहुत ज़्यादा है */
-  footer {
-    padding: 40px 20px 28px;
-  }
-
-  /* 4 columns → single column */
   .footer-top {
     grid-template-columns: 1fr;
     gap: 32px;
     margin-bottom: 32px;
   }
 
-  /* Brand section center करें */
   .footer-brand {
     text-align: center;
   }
 
-  /* Logo थोड़ा छोटा करें */
-  .footer-brand img {
+  .footer-logo {
     height: 75px;
-    margin-bottom: 14px !important;
+    margin-bottom: 14px;
   }
 
-  /* Footer bottom stack करें */
   .footer-bottom {
     flex-direction: column;
     text-align: center;
@@ -1265,11 +1198,7 @@ footer {
   }
 }
 
-/* ══════════════════════════════════════
-   480px — पुराने और छोटे phones
-   ══════════════════════════════════════ */
 @media (max-width: 480px) {
-
   footer {
     padding: 28px 16px 20px;
   }
@@ -1278,11 +1207,9 @@ footer {
     gap: 24px;
   }
 
-  /* Logo और छोटा करें */
-  .footer-brand img {
+  .footer-logo {
     height: 60px;
   }
-}
 }
 
 .manufacturing-grid,
@@ -1651,8 +1578,8 @@ footer {
 }
 
 .why-card h3,
-.hero-value-card h3,
-.mfg-feat h5 {
+.hero-value-card h2,
+.mfg-feat h3 {
     letter-spacing: 1.4px;
 }
 
