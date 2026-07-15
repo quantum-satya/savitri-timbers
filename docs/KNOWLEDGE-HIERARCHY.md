@@ -1,426 +1,493 @@
-# STDP Knowledge Hierarchy
+# STDP Repository Constitution
 
-Document ID: GOV-002
-Version: 1.0
-Status: Approved
-Role: Project Architect
+> **Filename:** `docs/KNOWLEDGE-HIERARCHY.md`
 
-Reviewers:
-- Satya Pal
+---
 
-Approved By:
+## Document Control
 
+| Property | Value |
+|----------|-------|
+| **Document ID** | GOV-002 |
+| **Document Title** | Repository Constitution |
+| **Filename** | `docs/KNOWLEDGE-HIERARCHY.md` |
+| **Version** | 2.0 |
+| **Status** | Approved |
+| **Phase** | Phase 2D – Repository Governance & AI Collaboration Framework |
+| **Document Owner** | Project Architect |
+| **Reviewer(s)** | Satya Pal |
+| **Approver(s)** | Satya Pal |
+| **Effective Date** | 2026-07-15 |
+| **Last Updated** | 2026-07-08 |
+| **Next Review** | Before Phase 3 completion |
 
-Last Updated:
-2026-07-04
+---
 
 ## Purpose
 
-This document defines the knowledge hierarchy for the Savitri Timbers Digital Platform (STDP). Its purpose is to ensure that all business decisions, documentation, design, content, and source code remain consistent throughout the project. Whenever two documents appear to conflict, this hierarchy determines which document takes precedence. This document is the highest-level governance document for the documentation system.
+The STDP Repository Constitution establishes the governance framework for the Savitri Timbers Digital Platform (STDP) repository.
 
+Its purpose is to define how the repository is organized, how documentation is governed, how decisions are documented, and how implementation is carried out in a consistent, traceable, and maintainable manner.
+
+This document serves as the highest-level governance document within the repository. It establishes the authority hierarchy for all governed documentation and provides the principles that guide project planning, architecture, branding, business documentation, implementation, and AI collaboration.
+
+By maintaining a single constitutional framework, STDP ensures that every change—from strategic business decisions to production code—follows a documented, reviewable, and repeatable process.
 ---
 
 ## Scope
 
-Covers the documentation hierarchy, precedence rules, conflict resolution, and knowledge flow. Does not define detailed business content, brand standards, implementation tasks, or deployment steps.
+This Constitution governs the STDP documentation system and the processes used to plan, review, implement, and maintain the project.
+
+It applies to:
+
+- Repository governance
+- Documentation standards
+- Documentation authority and precedence
+- Project governance
+- AI collaboration
+- Architecture documentation
+- Business documentation
+- Brand documentation
+- Content documentation
+- Development workflow
+- Source code implementation
+
+This document does not define detailed business strategy, visual design specifications, product content, implementation details, or operational procedures. Those responsibilities belong to their respective governed documents.
 
 ---
 
-## Source of Truth
+## Repository Philosophy
 
-This document is authoritative for the governance area described in its scope.
+The STDP repository is built on the principle that **documentation is the primary source of truth**.
 
-Related Documents
+Business strategy, architecture, brand identity, content, and implementation are documented before they are developed. Source code is considered the implementation of approved documentation rather than the definition of project requirements.
 
-- GOV-001 PROJECT.md
-- GOV-003 DECISIONS.md
-- AI-010 AI-INSTRUCTIONS.md
+Knowledge flows in one direction:
+
+```text
+Business Vision
+        ↓
+Repository Governance
+        ↓
+Project Governance
+        ↓
+Architecture
+        ↓
+Business Documentation
+        ↓
+Brand System
+        ↓
+Content
+        ↓
+Implementation
+        ↓
+Deployment
+```
+
+Every implementation decision must be traceable to approved documentation. When implementation and documentation differ, the approved documentation takes precedence until it is formally revised.
+
+This philosophy ensures that the repository remains understandable, maintainable, auditable, and scalable throughout the lifecycle of the project.
 
 ---
-# Purpose
 
-This document defines the knowledge hierarchy for the Savitri Timbers Digital Platform (STDP).
+## Core Governance Principles
 
-Its purpose is to ensure that all business decisions, documentation, design, content, and source code remain consistent throughout the project.
+Every change within the STDP repository shall follow these principles:
 
-Whenever two documents appear to conflict, this hierarchy determines which document takes precedence.
+1. **Discuss before documenting.**
+2. **Document before implementing.**
+3. **Review before approving.**
+4. **Implement only approved documentation.**
+5. **Review implementation before committing.**
+6. **Maintain documentation and implementation together.**
+7. **Preserve a complete and traceable project history.**
 
-This document is the highest-level governance document for the documentation system.
+These principles apply equally to human contributors, ChatGPT, Codex, and any future AI collaborators.
 
 ---
-# Governance Principles
 
-Every change to STDP follows four principles:
-
-1. Discuss before documenting.
-2. Document before implementing.
-3. Obtain business approval before coding.
-4. Review implementation before commit and deployment.
-
-This ensures that every change is intentional, traceable, and aligned with the company's business objectives.
 ---
-# Philosophy
 
-The website must never define the business.
+## Repository Structure
 
-Instead, knowledge flows in one direction:
+The STDP repository is organized using **logical governance domains**. These domains define the responsibilities, ownership, and authority of documentation throughout the project. They represent the **logical architecture** of the documentation system and do **not** necessarily correspond to the physical directory structure of the repository.
 
-Business Strategy
+The current physical repository structure is intentionally simple and optimized for discoverability.
+
+```text
+docs/
+├── AI-INSTRUCTIONS.md
+├── BRAND-GUIDE.md
+├── CHANGELOG.md
+├── CODEX-WORKFLOW.md
+├── CONTENT-GUIDE.md
+├── DECISIONS.md
+├── DEPLOYMENT.md
+├── DOCUMENT-REGISTRY.md
+├── ENVIRONMENT.md
+├── GLOSSARY.md
+├── KNOWLEDGE-HIERARCHY.md
+├── PROJECT.md
+├── PROJECT_STATUS.md
+├── README.md
+├── ROADMAP.md
+├── SETUP.md
+├── TODO.md
+│
+├── architecture/
+├── brand/
+└── business/
+```
+
+Within this physical structure, documentation is logically organized into the following governance domains.
+
+| Governance Domain | Primary Documents | Primary Responsibility |
+|-------------------|-------------------|------------------------|
+| **Repository Governance** | `KNOWLEDGE-HIERARCHY.md`, `DOCUMENT-REGISTRY.md`, `README.md` | Defines repository governance, documentation authority, and onboarding. |
+| **Project Governance** | `PROJECT.md`, `PROJECT_STATUS.md`, `ROADMAP.md`, `DECISIONS.md`, `CHANGELOG.md`, `TODO.md` | Defines project vision, planning, status, roadmap, strategic decisions, and project history. |
+| **Development Governance** | `AI-INSTRUCTIONS.md`, `CODEX-WORKFLOW.md`, `SETUP.md`, `ENVIRONMENT.md`, `DEPLOYMENT.md` | Defines development standards, AI collaboration, environment setup, and deployment procedures. |
+| **Architecture Documentation** | `docs/architecture/` | Defines the technical architecture, information architecture, implementation roadmap, and user experience structure. |
+| **Business Documentation** | `docs/business/` | Defines business strategy, products, positioning, target customers, messaging, and value proposition. |
+| **Brand Documentation** | `docs/brand/` | Defines brand philosophy, design system, visual identity, components, and user experience standards. |
+| **Content Standards** | `CONTENT-GUIDE.md`, `BRAND-GUIDE.md`, `GLOSSARY.md` | Defines editorial standards, terminology, writing guidelines, and communication consistency. |
+| **Implementation** | Source code and project assets | Implements approved documentation and maintains consistency with the governed documentation system. |
+
+Each governance domain has a clearly defined responsibility. Documents should not duplicate, redefine, or conflict with responsibilities assigned to another governance domain.
+
+When uncertainty exists, contributors should determine the appropriate governance domain before creating new documentation or implementing changes.
+---
+
+## Documentation Layers
+
+The documentation system is organized into seven governance layers.
+
+| Layer | Domain | Purpose |
+|--------|---------|---------|
+| Level 0 | Repository Constitution | Governs the repository and documentation system |
+| Level 1 | Project Governance | Defines project direction, status, planning, and decisions |
+| Level 2 | Development Governance | Defines development workflow and AI collaboration |
+| Level 3 | Architecture | Defines the technical and information architecture |
+| Level 4 | Business | Defines business strategy, products, positioning, and messaging |
+| Level 5 | Brand | Defines visual identity and user experience |
+| Level 6 | Content | Defines language, terminology, and content standards |
+| Level 7 | Implementation | Implements approved documentation through source code |
+
+---
+
+## Documentation Authority Hierarchy
+
+Authority flows from governance to implementation.
+
+```text
+Level 0
+Repository Constitution
+│
+├── Level 1
+│   Project Governance
+│
+├── Level 2
+│   Development Governance
+│
+├── Level 3
+│   Architecture
+│
+├── Level 4
+│   Business
+│
+├── Level 5
+│   Brand
+│
+├── Level 6
+│   Content
+│
+└── Level 7
+    Implementation
+```
+
+Higher layers define governance for lower layers.
+
+Lower layers may implement or reference higher layers but must never redefine them.
+
+---
+
+## Responsibilities of Each Documentation Layer
+
+Each documentation layer has a single primary responsibility.
+
+| Layer | Primary Responsibility |
+|--------|------------------------|
+| Repository Constitution | Repository governance and documentation authority |
+| Project Governance | Project planning, progress, roadmap, and strategic decisions |
+| Development Governance | Development standards, AI collaboration, setup, and deployment |
+| Architecture | Technical architecture and implementation planning |
+| Business | Business strategy, products, positioning, and value proposition |
+| Brand | Design system, visual identity, and user experience |
+| Content | Editorial standards, terminology, and communication |
+| Implementation | Production source code and assets |
+
+No documentation layer should assume the responsibilities of another layer.
+
+---
+---
+
+## Reading Paths
+
+Different contributors interact with the repository for different purposes. The following reading paths provide the recommended onboarding sequence.
+
+### Business Stakeholders
+
+1. `README.md`
+2. `PROJECT.md`
+3. `PROJECT_STATUS.md`
+4. `docs/business/`
+
+### Developers
+
+1. `README.md`
+2. `KNOWLEDGE-HIERARCHY.md`
+3. `PROJECT_STATUS.md`
+4. `docs/architecture/`
+5. Development Governance documents
+6. Source Code
+
+### AI Contributors
+
+1. `KNOWLEDGE-HIERARCHY.md`
+2. `AI-INSTRUCTIONS.md`
+3. `PROJECT_STATUS.md`
+4. `docs/architecture/`
+5. `docs/business/`
+6. `docs/brand/`
+7. Approved implementation tasks
+
+### New Contributor
+
+1. `README.md`
+2. `KNOWLEDGE-HIERARCHY.md`
+3. `PROJECT.md`
+4. `PROJECT_STATUS.md`
+5. DOCUMENT-REGISTRY
+
+Following these reading paths ensures that every contributor understands the project context before making changes.
+
+---
+
+## AI Collaboration Framework
+
+STDP follows a documentation-first AI collaboration model.
+
+AI systems assist with planning, architecture, implementation, review, and documentation while operating within clearly defined responsibilities.
+
+The collaboration model consists of three roles:
+
+| Role | Responsibility |
+|------|----------------|
+| Human | Vision, business decisions, approvals, Git ownership, deployment |
+| ChatGPT | Product Owner, Solution Architect, Documentation Lead, Reviewer, Sprint Planner |
+| Codex (or equivalent implementation AI) | Implementation Engineer responsible for executing approved tasks |
+
+AI contributors must operate within the authority defined by this Constitution and may not independently redefine business strategy, architecture, or repository governance.
+
+---
+
+## Collaboration Roles and Responsibilities
+
+Every participant in the project has clearly defined responsibilities.
+
+### Human
+
+- Defines business vision.
+- Makes final business decisions.
+- Approves governance and architecture.
+- Owns the Git repository.
+- Controls production deployments.
+
+### ChatGPT
+
+- Maintains repository governance.
+- Defines architecture and technical direction.
+- Reviews documentation.
+- Reviews implementation.
+- Plans project phases and sprints.
+- Maintains documentation consistency.
+
+### Codex
+
+- Implements approved tasks.
+- Refactors approved code.
+- Fixes implementation defects.
+- Does not redefine architecture, business strategy, or governance.
+
+Responsibility and authority are intentionally separated to maintain consistency throughout the project.
+
+---
+
+## Decision Authority
+
+Decision-making authority follows the principle that responsibility and approval are distinct.
+
+| Decision Type | Authority |
+|--------------|-----------|
+| Business Strategy | Human |
+| Brand Direction | Human with ChatGPT recommendation |
+| Repository Governance | Human approval based on ChatGPT proposal |
+| Architecture | ChatGPT recommendation with Human approval |
+| Implementation | Codex after approval |
+| Git Commits | Human |
+| Production Deployment | Human |
+| Documentation | ChatGPT recommendation + Human approval \
+
+No implementation may bypass the documented approval process.
+
+---
+
+## Documentation Lifecycle
+
+Every governed change within STDP follows a documented lifecycle.
+
+```text
+Discussion
+        ↓
+Decision
         ↓
 Documentation
         ↓
-Design
+Review
         ↓
-Content
+Approval
         ↓
 Implementation
         ↓
-Deployment
-
-Code is the final output—not the source of truth.
-
----
-
-# Knowledge Hierarchy
-
-Level 1
-Business Knowledge
-
-Directory
-
-docs/business/
-
-Purpose
-
-Defines the business.
-
-Includes:
-
-• Brand Positioning
-• Product Catalog
-• Value Proposition
-• Target Customers
-• Messaging Framework
-• Homepage Content
-
-Questions Answered
-
-Who are we?
-
-What do we sell?
-
-Why are we different?
-
-Who is our customer?
-
-What promises can we make?
-
-Authority
-
-Highest
-
----
-
-Level 2
-Brand Knowledge
-
-Directory
-
-docs/brand/
-
-Purpose
-
-Defines the visual and experiential identity.
-
-Includes
-
-• Design System
-• Brand Philosophy
-• Design Principles
-• Typography
-• Color System
-• Components
-• User Journeys
-
-Questions Answered
-
-How should the brand look?
-
-How should users experience the website?
-
-Authority
-
-Business documents always override brand documents.
-
----
-
-Level 3
-Content Knowledge
-
-Documents
-
-CONTENT-GUIDE.md
-
-Homepage specifications
-
-Future content specifications
-
-Purpose
-
-Defines how approved business and brand knowledge is communicated through words.
-
-Questions Answered
-
-What should be written?
-
-What tone should be used?
-
-How should information be structured?
-
-Authority
-
-Must follow both Business and Brand documentation.
-
----
-
-Level 4
-Project Knowledge
-
-Documents
-
-PROJECT.md
-
-ROADMAP.md
-
-TODO.md
-
-DECISIONS.md
-
-CHANGELOG.md
-
-DEPLOYMENT.md
-
-Purpose
-
-Defines project planning and development workflow.
-
-Questions Answered
-
-What are we building?
-
-What is next?
-
-What decisions have been made?
-
-Authority
-
-Cannot override Business or Brand decisions.
-
----
-
-Level 5
-AI Knowledge
-
-Documents
-
-AI-INSTRUCTIONS.md
-
-CODEX-WORKFLOW.md
-
-Purpose
-
-Defines how AI agents should work inside STDP.
-
-Questions Answered
-
-How should AI behave?
-
-How should implementations be performed?
-
-Authority
-
-Must follow every higher level.
-
-AI never defines business policy.
-
----
-
-Level 6
-Implementation
-
-Source
-
-HTML
-
-CSS
-
-JavaScript
-
-Assets
-
-Purpose
-
-Implements approved documentation.
-
-Authority
-
-Lowest.
-
-Source code must always follow documentation.
-
-If code conflicts with documentation, documentation is considered correct unless a business decision changes it.
-
----
-
-# Decision Flow
-
-Every feature should follow this sequence.
-
-Business Discussion
+Verification
         ↓
-Documentation Update
-        ↓
-Documentation Review
-        ↓
-Business Approval
-        ↓
-Codex Implementation
-        ↓
-ChatGPT Code & UX Review
-        ↓
-Git Commit
+Commit
         ↓
 Deployment
         ↓
-Changelog Update
+Project Status Update
+```
 
-Implementation must never begin before documentation is approved.
+Documentation always precedes implementation.
 
----
-
-# Conflict Resolution
-
-When two documents disagree:
-
-1. Business documentation wins over all other documentation.
-
-2. Brand documentation wins over Content documentation.
-
-3. Content documentation wins over implementation.
-
-4. Project documentation cannot redefine business strategy.
-
-5. AI instructions cannot override approved documentation.
-
-6. Source code must be updated to match approved documentation.
+Implementation is considered complete only after the corresponding documentation has been reviewed and approved.
 
 ---
 
-# Source of Truth
+## Implementation Lifecycle
 
-The following documents are considered authoritative.
+Every implementation task follows a consistent engineering workflow.
 
-Business
+1. Review the approved documentation.
+2. Define the implementation task.
+3. Implement the approved changes.
+4. Perform documentation and code review.
+5. Verify functionality.
+6. Commit the changes.
+7. Deploy when approved.
+8. Update project tracking documents where applicable.
 
-• docs/business/
-
-Brand
-
-• docs/brand/
-
-Content
-
-• CONTENT-GUIDE.md
-
-Project
-
-• PROJECT.md
-
-AI Workflow
-
-• AI-INSTRUCTIONS.md
-• CODEX-WORKFLOW.md
+Implementation must never introduce requirements that are not already documented or formally approved.
 
 ---
 
-# Documentation Principles
+## Conflict Resolution
 
-Every document should satisfy the following principles.
+When two sources appear to conflict, the following order of precedence applies:
 
-Single Source of Truth
+1. Repository Constitution
+2. Project Governance
+3. Development Governance
+4. Architecture Documentation
+5. Business Documentation
+6. Brand Documentation
+7. Content Standards
+8. Source Code
 
-Every concept should have one authoritative document.
+Conflicts should be resolved by updating the appropriate documentation rather than modifying implementation in isolation.
 
-Documentation Before Code
-
-Business decisions are documented before implementation.
-
-Consistency
-
-The website, documentation and source code must always agree.
-
-Accuracy
-
-Marketing content must accurately represent the business.
-
-Traceability
-
-Every implementation should be traceable to an approved document.
-
-Maintainability
-
-Documentation should remain clear, concise and easy to update.
+When uncertainty exists, implementation should pause until the governing documentation has been clarified.
 
 ---
 
-# AI Operating Principle
+## Definition of Done
 
-AI agents working on STDP must always follow this order of reasoning.
+A task is considered complete only when all of the following conditions are satisfied:
 
-1. Read Business documentation.
+- Approved documentation exists.
+- Implementation matches the approved documentation.
+- Documentation remains accurate.
+- Review has been completed.
+- Quality standards have been satisfied.
+- Project tracking documents have been updated where required.
+- The change has been committed to version control.
+- Repository governance remains consistent.
 
-2. Read Brand documentation.
-
-3. Read Content documentation.
-
-4. Read Project documentation.
-
-5. Read AI workflow documentation.
-
-6. Implement only what is approved.
-
-AI must never invent business strategy, product information, marketing claims, or design rules.
+Completion is measured by repository consistency rather than code alone.
 
 ---
 
-# Future Expansion
+## Repository Governance Rules
 
-As STDP grows, additional knowledge domains may be introduced.
+The following rules govern all work performed within the STDP repository:
 
-Examples include:
+1. Documentation is the primary source of truth.
+2. Every governed document has a single primary responsibility.
+3. Repository governance takes precedence over implementation.
+4. Changes should be reviewed before implementation begins.
+5. Source code must reflect approved documentation.
+6. Documentation and implementation should evolve together.
+7. Repository history must remain accurate and traceable.
+8. Simplicity and maintainability are preferred over unnecessary complexity.
 
-docs/legal/
-
-docs/sales/
-
-docs/hr/
-
-docs/manufacturing/
-
-docs/finance/
-
-Each new domain must define its position within this hierarchy before becoming part of the project's official documentation.
+These rules apply equally to human contributors and AI collaborators.
 
 ---
 
-# Guiding Principle
+## Future Expansion
 
-Business defines the brand.
+The STDP repository is designed to evolve as the business, technology, and organization grow.
 
-The brand shapes the experience.
+New documentation domains may be introduced when they represent a distinct area of governance or business knowledge. Examples include:
 
-The experience guides the content.
+- `docs/legal/`
+- `docs/finance/`
+- `docs/manufacturing/`
+- `docs/operations/`
+- `docs/hr/`
+- `docs/sales/`
+- `docs/marketing/`
+- `docs/security/`
+- `docs/quality/`
+- `docs/testing/`
 
-The content drives the implementation.
+Before a new documentation domain is adopted, it shall:
 
-The implementation delivers the business.
+1. Define its purpose and scope.
+2. Be registered in `DOCUMENT-REGISTRY.md`.
+3. Be assigned an appropriate governance layer.
+4. Avoid duplicating responsibilities of existing domains.
+5. Be approved through the repository governance process.
+
+This ensures that the documentation system remains organized, scalable, and maintainable as STDP evolves.
+
+---
+
+## Guiding Principles
+
+The STDP repository is governed by the following enduring principles:
+
+- Business defines direction.
+- Governance establishes consistency.
+- Architecture provides structure.
+- Documentation records knowledge.
+- Implementation realizes approved documentation.
+- Review protects quality.
+- Version control preserves history.
+- Continuous improvement strengthens the repository.
+
+Every contributor—human or AI—is expected to preserve these principles when planning, documenting, implementing, reviewing, or maintaining the project.
+
+---
+
+**End of Document**
+
