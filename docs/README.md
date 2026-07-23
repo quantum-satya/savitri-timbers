@@ -15,6 +15,12 @@ Last Updated: 2026-07-05
 
 ---
 
+## About STDP
+
+The Savitri Timbers Digital Platform (STDP) is the digital foundation for Savitri Timbers Pvt. Ltd.
+
+It follows a documentation-first development model, where business strategy, governance, architecture, and implementation evolve together through a structured review and approval process.
+
 ## Purpose
 
 This directory contains the official documentation for the Savitri Timbers Digital Platform (STDP).
@@ -41,11 +47,9 @@ It does not contain application source code.
 
 ---
 
-## Source of Truth
+## Related Documents
 
 This document is the entry point to the STDP documentation system.
-
-Related Documents
 
 - PROJECT.md
 - KNOWLEDGE-HIERARCHY.md

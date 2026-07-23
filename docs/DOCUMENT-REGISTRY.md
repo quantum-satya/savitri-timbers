@@ -1,18 +1,43 @@
 # STDP Document Registry
 
-Document ID: REF-000
-Version: 1.0
-Status: Approved
-Role: Project Documentation Lead
+> **Filename:** `docs/DOCUMENT-REGISTRY.md`
 
-Reviewers:
-- Satya Pal
+---
 
-Approved By:
+## Document Control
 
+| Property | Value |
+|----------|-------|
+| **Document ID** | REF-000 |
+| **Document Title** | Document Registry |
+| **Filename** | `docs/DOCUMENT-REGISTRY.md` |
+| **Version** | 2.0 |
+| **Status** | Approved |
+| **Phase** | Phase 2D – Repository Governance & AI Collaboration Framework |
+| **Document Owner** | Project Documentation Lead |
+| **Reviewer(s)** | Satya Pal |
+| **Approver(s)** | Satya Pal |
+| **Effective Date** | 2026-07-23 |
+| **Last Updated** | 2026-07-17 |
+| **Next Review** | Before Phase 3 completion |
 
-Last Updated: 2026-07-05
+## Registry Philosophy
 
+The STDP Document Registry is the authoritative catalog of all governed documentation within the repository.
+
+Every governed document shall:
+
+- have a unique Document ID,
+- belong to a governance domain,
+- occupy an authority layer,
+- have a defined owner,
+- maintain version information,
+- maintain review status,
+- remain traceable throughout its lifecycle.
+
+The registry serves as the primary reference for documentation governance and repository traceability.
+
+If a governed document is not registered here, it is not considered part of the official STDP documentation system.
 
 ## Purpose
 
@@ -26,30 +51,34 @@ Covers governed documents under `docs/`, their assigned IDs, ownership roles, st
 
 ---
 
-## Source of Truth
-
-This document is the authoritative registry of all governed documentation within the STDP repository.
-
-Every governed document must have a unique Document ID recorded here.
-
-Document IDs are permanent and must never be reused.
-
-This registry serves as the primary index for repository governance and document traceability.
-
-Related Documents
+## Related Documents
 
 - PROJECT.md
 - KNOWLEDGE-HIERARCHY.md
-- DECISIONS.md
+- README.md
 
 ---
 
+## Document Classification
+
+The STDP documentation system is organized into the following governance domains:
+
+- Governance
+- Development
+- Architecture
+- Business
+- Brand
+- Reference
+- Operations
+
+Each governed document belongs to exactly one governance domain and one authority layer, as defined in the Repository Constitution.
+
 ## Governance
 
-| Document ID | Folder | Document | Role | Status | Version | Last Updated 
+| Document ID | Document | Governance Domain | Authority Layer | Status | Version |
 | --- | --- | --- | --- | --- | --- |
 | GOV-001 | docs | `PROJECT.md` | Project Architect | Approved | 1.0 |  |
-| GOV-002 | docs | `KNOWLEDGE-HIERARCHY.md` | Project Architect | Approved | 1.0 | 2026-07-04 |
+| GOV-002 | docs | `KNOWLEDGE-HIERARCHY.md` | Project Architect | Approved | 2.0 | 2026-07-17 |
 | GOV-003 | docs | `DECISIONS.md` | Project Architect | Approved | 1.0 |  |
 
 
@@ -93,7 +122,7 @@ Related Documents
 
 | Document ID | Folder | Document | Role | Status | Version | Last Updated |
 | --- | --- | --- | --- | --- | --- |
-| REF-000 | DOCUMENT-REGISTRY.md | Project Documentation Lead | Approved | 1.0 | 2026-07-05 |
+| REF-000 | DOCUMENT-REGISTRY.md | Project Documentation Lead | Approved | 2.0 | 2026-07-05 |
 | REF-010 | docs | `CONTENT-GUIDE.md` | Content Strategist | Draft | 1.0 |  |
 | REF-020 | docs | `GLOSSARY.md` | Project Documentation Lead | Draft | 1.0 |  |
 | REF-030 | docs | `BRAND-GUIDE.md` | Brand Owner | Review | 1.0 |  |
@@ -109,20 +138,35 @@ Related Documents
 
 ---
 
-# Registry Rules
+## Registry Rules
 
-1. Every governed document must have a unique Document ID.
+1. Every governed document shall have a unique Document ID.
 
-2. Document IDs are permanent and must never be reused.
+2. Document IDs are permanent and shall never be reused.
 
-3. New documents must be registered before they are referenced by other documentation.
+3. Every governed document shall be registered before becoming authoritative.
 
-4. The Document Registry must be updated whenever:
-   - a governed document is added,
-   - a document is renamed,
-   - a document is deprecated,
-   - a document's status changes.
+4. Every governed document shall belong to exactly one governance domain.
 
-5. This registry serves as the master index for repository governance and documentation traceability.
+5. Every governed document shall occupy one authority layer.
 
-6. If this registry conflicts with another document regarding Document IDs, this registry takes precedence.
+6. Changes to document ownership, status, or version shall be reflected in this registry.
+
+7. Deprecated documents shall remain registered with an appropriate status.
+
+8. If document metadata conflicts with this registry, the registry takes precedence until the discrepancy is resolved.
+
+## Change Management
+
+The Document Registry shall be updated whenever:
+
+- a governed document is created,
+- a document is renamed,
+- a document is relocated,
+- ownership changes,
+- status changes,
+- version changes,
+- a document is deprecated,
+- a governance domain is introduced.
+
+Updating the registry is considered part of the Definition of Done for any documentation change affecting governed documents.
