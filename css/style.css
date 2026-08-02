@@ -96,8 +96,8 @@ header nav a[aria-current="page"]::after {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
     overflow: hidden;
     padding: 120px 40px 80px;
     background:none;    
@@ -107,24 +107,26 @@ header nav a[aria-current="page"]::after {
     position: absolute;
     inset: 0;
     z-index: 0;
-    background:
-    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(45,106,71,0.35) 0%, transparent 70%),
-    radial-gradient(circle at 10% 80%, rgba(201,168,76,0.08) 0%, transparent 40%),
-    radial-gradient(circle at 90% 20%, rgba(201,168,76,0.06) 0%, transparent 35%),
-    linear-gradient(160deg, #0a1f11 0%, #0d2b1a 40%, #142d1e 70%, #0a1a0f 100%);
 
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7,17,14,.82) 0%,
+            rgba(7,17,14,.62) 38%,
+            rgba(7,17,14,.28) 65%,
+            rgba(7,17,14,.10) 100%
+        ),
+        url("../assets/images/hero/arena-clean-v1.jpg");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 .hero-grid {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 3px;
-    opacity: 0.18;
+    display: none;
 }
 
+/*
 .hero-grid div { background-size: cover; background-position: center; }
 .hero-grid div:nth-child(1) { background: linear-gradient(135deg, #1a4a2e, #2d6a47); }
 .hero-grid div:nth-child(2) { background: linear-gradient(135deg, #4a2c0a, #7a5020); }
@@ -132,14 +134,26 @@ header nav a[aria-current="page"]::after {
 .hero-grid div:nth-child(4) { background: linear-gradient(135deg, #7a5020, #4a2c0a); }
 .hero-grid div:nth-child(5) { background: linear-gradient(135deg, #2d6a47, #1a4a2e); }
 .hero-grid div:nth-child(6) { background: linear-gradient(135deg, #0d2b1a, #1a4a2e); }
+*/
 
 .hero-overlay {
     position: absolute;
     inset: 0;
     z-index: 2;
-    background: linear-gradient(to bottom, rgba(13,43,26,0.6) 0%, rgba(13,43,26,0.3) 50%, rgba(13,43,26,0.8) 100%);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.18) 0%,
+            rgba(0,0,0,.05) 30%,
+            rgba(0,0,0,.28) 100%
+        );
 }
 
+.wood-texture {
+    display: none;
+}
+/*
 .wood-texture {
   position: absolute;
   inset: 0;
@@ -149,12 +163,26 @@ header nav a[aria-current="page"]::after {
     88deg, transparent 0px, transparent 18px, rgba(201,168,76,0.3) 18px, rgba(201,168,76,0.3) 19px
   );
 }
-
+*/
+/*
 .hero-content {
     position: relative;
     z-index: 5;
     max-width: 900px;
 }
+*/
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+
+    width: min(720px, 100%);
+    margin-right: auto;
+    margin-left: 0;
+
+    text-align: left;
+}
+
 
 .hero-badge {
     display: inline-block;
@@ -1728,5 +1756,162 @@ footer {
     .sports-flooring h2,
     .trust-indicators h2 {
         font-size: 32px;
+    }
+}
+
+/* ===================================================
+   Sprint 3A.2 — Homepage hero and navigation refinement
+=================================================== */
+
+header .container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.logo img {
+    height: 92px;
+}
+
+nav {
+    gap: 28px;
+}
+
+header nav a {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.35px;
+}
+
+.hero {
+    min-height: 760px;
+    padding-top: 178px;
+    padding-bottom: 72px;
+}
+
+.hero-content {
+    width: min(680px, 100%);
+}
+
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+}
+
+.hero-eyebrow::before {
+    width: 28px;
+    height: 1px;
+    background: currentColor;
+    content: '';
+}
+
+.hero h1 {
+    max-width: 650px;
+    font-size: clamp(46px, 5vw, 72px);
+    line-height: 1.04;
+    margin-bottom: 22px;
+    text-wrap: balance;
+}
+
+.hero h1 em {
+    color: var(--gold-light);
+}
+
+.hero-content > .hero-intro {
+    max-width: 570px;
+    margin: 0 0 32px;
+    color: rgba(255,255,255,0.86);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.hero-buttons {
+    justify-content: flex-start;
+}
+
+.hero-assurances {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    margin-top: 44px;
+    padding: 18px 0 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    list-style: none;
+}
+
+.hero-assurances li {
+    color: rgba(255,255,255,0.82);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.15px;
+    text-transform: uppercase;
+}
+
+.hero-assurances li::before {
+    margin-right: 8px;
+    color: var(--gold);
+    content: '◆';
+    font-size: 7px;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        min-height: 700px;
+        padding-top: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 62px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    header nav a {
+        font-size: 9px;
+        letter-spacing: 0.75px;
+    }
+
+    .hero {
+        min-height: 680px;
+        padding: 132px 24px 56px;
+        background-position: 58% center;
+    }
+
+    .hero-bg {
+        background-position: 59% center;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 11.5vw, 58px);
+    }
+
+    .hero-content > .hero-intro {
+        max-width: 480px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero-assurances {
+        display: grid;
+        gap: 11px;
+        margin-top: 32px;
+    }
+
+    .hero-eyebrow {
+        margin-bottom: 16px;
+        font-size: 9px;
+        letter-spacing: 1.8px;
     }
 }
