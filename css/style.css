@@ -292,6 +292,42 @@ header nav a[aria-current="page"]::after {
   color: var(--gold);
 }
 
+.btn:focus-visible,
+.btn-outline:focus-visible {
+    outline: 3px solid var(--gold-light);
+    outline-offset: 4px;
+}
+
+.credentials {
+    background: linear-gradient(180deg,#0d2b1a,#0a1f11);
+}
+
+.credentials-list {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:24px;
+    margin-top:48px;
+}
+
+.credentials-list div{
+    padding:28px;
+    border-top:2px solid rgba(201,168,76,.4);
+    background:rgba(255,255,255,.04);
+}
+
+.credentials dt{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:var(--gold);
+    margin-bottom:8px;
+}
+
+.credentials dd{
+    font-size:15px;
+    color:white;
+}
+
 .hero-value-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
