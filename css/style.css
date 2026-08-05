@@ -302,6 +302,13 @@ header nav a[aria-current="page"]::after {
     background: linear-gradient(180deg,#0d2b1a,#0a1f11);
 }
 
+.credentials-inner{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:60px;
+    align-items:start;
+}
+
 .credentials-list {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -430,6 +437,68 @@ section {
   align-items: center;
   justify-content: center;
   gap: 60px;
+}
+
+/* Sprint 3A.4 Trust Strip */
+
+.trust-strip{
+    background:var(--green-mid);
+    border-top:1px solid rgba(201,168,76,.15);
+    border-bottom:1px solid rgba(201,168,76,.15);
+    padding:30px 0;
+}
+
+.trust-strip svg{
+    fill:none;
+    stroke:var(--gold);
+    stroke-width:1.8;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+.trust-strip-inner{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.trust-strip-label{
+    color:#fff;
+    font-size:15px;
+    line-height:1.6;
+}
+
+.trust-strip-list{
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:22px;
+    margin:0;
+    padding:0;
+}
+
+.trust-strip-list li{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.trust-strip-list svg{
+    width:22px;
+    height:22px;
+    stroke:var(--gold);
+    stroke-width:1.6;
+    fill:none;
+    flex-shrink:0;
+}
+
+.trust-strip-list span{
+    font-size:11px;
+    letter-spacing:1.4px;
+    color:var(--gold);
+    text-transform:uppercase;
+    line-height:1.5;
 }
 
 .trust-item {
@@ -1030,7 +1099,23 @@ section {
   justify-content: center;
 }
 
-.mfg-visual-inner { text-align: center; }
+.mfg-visual--details{
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,.05),
+        rgba(255,255,255,.02)
+    );
+
+    border:1px solid rgba(201,168,76,.18);
+
+    padding:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.mfg-visual-inner { text-align: center; width:100%;}
 .mfg-visual-inner .big-icon { font-size: 64px; opacity: 0.4; }
 
 /* Mfg features — 2x2 grid desktop par */
@@ -1206,6 +1291,14 @@ footer {
   margin-bottom: 14px;
 }
 
+.card-index{
+    display:block;
+    color:var(--gold);
+    font-size:12px;
+    letter-spacing:2px;
+    margin-bottom:18px;
+}
+
 .contact-icon { font-size: 14px; margin-top: 2px; flex-shrink: 0; }
 
 .contact-text {
@@ -1276,14 +1369,34 @@ footer {
   }
 }
 
-.manufacturing-grid,
+
 .why-grid {
     display: grid;
     gap: 40px;
 }
 
+.why-grid--four{
+    grid-template-columns:repeat(4,1fr);
+}
+
+@media(max-width:900px){
+    .why-grid--four{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:640px){
+    .why-grid--four{
+        grid-template-columns:1fr;
+    }
+}
+
 .manufacturing-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.manufacturing-content{
+    max-width:760px;
 }
 
 /* ── WHY CHOOSE US — DESKTOP ── */
@@ -1541,6 +1654,31 @@ footer {
     font-weight: 300;
 }
 
+.mfg-kicker{
+    display:block;
+    color:var(--gold);
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.mfg-visual--details{
+    padding:48px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(201,168,76,.18);
+}
+
+.mfg-visual--details h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+.mfg-visual--details p{
+    line-height:2;
+    color:var(--text-light);
+}
 /* ===================================================
    Phase 2B.5 - Homepage Visual Polish
 =================================================== */
@@ -1702,10 +1840,7 @@ footer {
     margin-top: 30px;
 }
 
-.manufacturing-grid {
-    align-items: center;
-    gap: 56px;
-}
+
 
 .mfg-visual {
     border: 1px solid rgba(201,168,76,0.18);
