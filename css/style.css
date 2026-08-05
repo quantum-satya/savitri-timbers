@@ -96,8 +96,8 @@ header nav a[aria-current="page"]::after {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
     overflow: hidden;
     padding: 120px 40px 80px;
     background:none;    
@@ -107,24 +107,26 @@ header nav a[aria-current="page"]::after {
     position: absolute;
     inset: 0;
     z-index: 0;
-    background:
-    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(45,106,71,0.35) 0%, transparent 70%),
-    radial-gradient(circle at 10% 80%, rgba(201,168,76,0.08) 0%, transparent 40%),
-    radial-gradient(circle at 90% 20%, rgba(201,168,76,0.06) 0%, transparent 35%),
-    linear-gradient(160deg, #0a1f11 0%, #0d2b1a 40%, #142d1e 70%, #0a1a0f 100%);
 
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7,17,14,.82) 0%,
+            rgba(7,17,14,.62) 38%,
+            rgba(7,17,14,.28) 65%,
+            rgba(7,17,14,.10) 100%
+        ),
+        url("../assets/images/hero/arena-clean-v1.jpg");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 .hero-grid {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 3px;
-    opacity: 0.18;
+    display: none;
 }
 
+/*
 .hero-grid div { background-size: cover; background-position: center; }
 .hero-grid div:nth-child(1) { background: linear-gradient(135deg, #1a4a2e, #2d6a47); }
 .hero-grid div:nth-child(2) { background: linear-gradient(135deg, #4a2c0a, #7a5020); }
@@ -132,14 +134,26 @@ header nav a[aria-current="page"]::after {
 .hero-grid div:nth-child(4) { background: linear-gradient(135deg, #7a5020, #4a2c0a); }
 .hero-grid div:nth-child(5) { background: linear-gradient(135deg, #2d6a47, #1a4a2e); }
 .hero-grid div:nth-child(6) { background: linear-gradient(135deg, #0d2b1a, #1a4a2e); }
+*/
 
 .hero-overlay {
     position: absolute;
     inset: 0;
     z-index: 2;
-    background: linear-gradient(to bottom, rgba(13,43,26,0.6) 0%, rgba(13,43,26,0.3) 50%, rgba(13,43,26,0.8) 100%);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.18) 0%,
+            rgba(0,0,0,.05) 30%,
+            rgba(0,0,0,.28) 100%
+        );
 }
 
+.wood-texture {
+    display: none;
+}
+/*
 .wood-texture {
   position: absolute;
   inset: 0;
@@ -149,12 +163,26 @@ header nav a[aria-current="page"]::after {
     88deg, transparent 0px, transparent 18px, rgba(201,168,76,0.3) 18px, rgba(201,168,76,0.3) 19px
   );
 }
-
+*/
+/*
 .hero-content {
     position: relative;
     z-index: 5;
     max-width: 900px;
 }
+*/
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+
+    width: min(720px, 100%);
+    margin-right: auto;
+    margin-left: 0;
+
+    text-align: left;
+}
+
 
 .hero-badge {
     display: inline-block;
@@ -264,6 +292,49 @@ header nav a[aria-current="page"]::after {
   color: var(--gold);
 }
 
+.btn:focus-visible,
+.btn-outline:focus-visible {
+    outline: 3px solid var(--gold-light);
+    outline-offset: 4px;
+}
+
+.credentials {
+    background: linear-gradient(180deg,#0d2b1a,#0a1f11);
+}
+
+.credentials-inner{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:60px;
+    align-items:start;
+}
+
+.credentials-list {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:24px;
+    margin-top:48px;
+}
+
+.credentials-list div{
+    padding:28px;
+    border-top:2px solid rgba(201,168,76,.4);
+    background:rgba(255,255,255,.04);
+}
+
+.credentials dt{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:var(--gold);
+    margin-bottom:8px;
+}
+
+.credentials dd{
+    font-size:15px;
+    color:white;
+}
+
 .hero-value-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -366,6 +437,68 @@ section {
   align-items: center;
   justify-content: center;
   gap: 60px;
+}
+
+/* Sprint 3A.4 Trust Strip */
+
+.trust-strip{
+    background:var(--green-mid);
+    border-top:1px solid rgba(201,168,76,.15);
+    border-bottom:1px solid rgba(201,168,76,.15);
+    padding:30px 0;
+}
+
+.trust-strip svg{
+    fill:none;
+    stroke:var(--gold);
+    stroke-width:1.8;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+.trust-strip-inner{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.trust-strip-label{
+    color:#fff;
+    font-size:15px;
+    line-height:1.6;
+}
+
+.trust-strip-list{
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:22px;
+    margin:0;
+    padding:0;
+}
+
+.trust-strip-list li{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.trust-strip-list svg{
+    width:22px;
+    height:22px;
+    stroke:var(--gold);
+    stroke-width:1.6;
+    fill:none;
+    flex-shrink:0;
+}
+
+.trust-strip-list span{
+    font-size:11px;
+    letter-spacing:1.4px;
+    color:var(--gold);
+    text-transform:uppercase;
+    line-height:1.5;
 }
 
 .trust-item {
@@ -966,7 +1099,23 @@ section {
   justify-content: center;
 }
 
-.mfg-visual-inner { text-align: center; }
+.mfg-visual--details{
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,.05),
+        rgba(255,255,255,.02)
+    );
+
+    border:1px solid rgba(201,168,76,.18);
+
+    padding:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.mfg-visual-inner { text-align: center; width:100%;}
 .mfg-visual-inner .big-icon { font-size: 64px; opacity: 0.4; }
 
 /* Mfg features — 2x2 grid desktop par */
@@ -1142,6 +1291,14 @@ footer {
   margin-bottom: 14px;
 }
 
+.card-index{
+    display:block;
+    color:var(--gold);
+    font-size:12px;
+    letter-spacing:2px;
+    margin-bottom:18px;
+}
+
 .contact-icon { font-size: 14px; margin-top: 2px; flex-shrink: 0; }
 
 .contact-text {
@@ -1212,14 +1369,34 @@ footer {
   }
 }
 
-.manufacturing-grid,
+
 .why-grid {
     display: grid;
     gap: 40px;
 }
 
+.why-grid--four{
+    grid-template-columns:repeat(4,1fr);
+}
+
+@media(max-width:900px){
+    .why-grid--four{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:640px){
+    .why-grid--four{
+        grid-template-columns:1fr;
+    }
+}
+
 .manufacturing-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.manufacturing-content{
+    max-width:760px;
 }
 
 /* ── WHY CHOOSE US — DESKTOP ── */
@@ -1477,6 +1654,31 @@ footer {
     font-weight: 300;
 }
 
+.mfg-kicker{
+    display:block;
+    color:var(--gold);
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.mfg-visual--details{
+    padding:48px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(201,168,76,.18);
+}
+
+.mfg-visual--details h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+.mfg-visual--details p{
+    line-height:2;
+    color:var(--text-light);
+}
 /* ===================================================
    Phase 2B.5 - Homepage Visual Polish
 =================================================== */
@@ -1638,10 +1840,7 @@ footer {
     margin-top: 30px;
 }
 
-.manufacturing-grid {
-    align-items: center;
-    gap: 56px;
-}
+
 
 .mfg-visual {
     border: 1px solid rgba(201,168,76,0.18);
@@ -1728,5 +1927,428 @@ footer {
     .sports-flooring h2,
     .trust-indicators h2 {
         font-size: 32px;
+    }
+}
+
+/* ===================================================
+   Sprint 3A.3 — Homepage navigation & hero polish
+=================================================== */
+
+.home-page header {
+    background: linear-gradient(180deg, rgba(7, 17, 14, 0.42), rgba(7, 17, 14, 0));
+    border-color: transparent;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+    box-shadow: none;
+    transition: background-color 480ms ease, backdrop-filter 480ms ease,
+        border-color 480ms ease, box-shadow 480ms ease;
+}
+
+.home-page header.is-scrolled {
+    background: rgba(8, 24, 16, 0.78);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(18px) saturate(135%);
+    -webkit-backdrop-filter: blur(18px) saturate(135%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+}
+
+.home-page header .container {
+    min-height: 104px;
+    padding: 10px clamp(28px, 5vw, 80px);
+    transition: min-height 480ms ease, padding 480ms ease;
+}
+
+.home-page header.is-scrolled .container {
+    min-height: 78px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.home-page .logo {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.home-page .logo img {
+    height: 78px;
+    transition: height 480ms ease, transform 240ms ease;
+}
+
+.home-page header.is-scrolled .logo img {
+    height: 62px;
+}
+
+.home-page .logo a:focus-visible,
+.home-page header nav a:focus-visible,
+.home-page .btn:focus-visible,
+.home-page .btn-outline:focus-visible {
+    outline: 2px solid var(--gold-pale);
+    outline-offset: 5px;
+}
+
+.home-page nav {
+    align-items: center;
+    gap: clamp(18px, 2.3vw, 36px);
+}
+
+.home-page header nav a {
+    position: relative;
+    padding: 12px 0;
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    transition: color 220ms ease;
+}
+
+.home-page header nav a::after {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    left: 0;
+    width: auto;
+    height: 1px;
+    margin: 0;
+    background: currentColor;
+    content: '';
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 260ms ease;
+}
+
+.home-page header nav a:hover,
+.home-page header nav a:focus-visible,
+.home-page header nav a[aria-current="page"] {
+    color: var(--gold-light);
+}
+
+.home-page header nav a:hover::after,
+.home-page header nav a:focus-visible::after,
+.home-page header nav a[aria-current="page"]::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.home-page .hero {
+    min-height: max(760px, 100svh);
+    padding: 168px clamp(32px, 9vw, 150px) 104px;
+}
+
+.home-page .hero-bg {
+    background-position: 61% center;
+}
+
+.home-page .hero-content {
+    width: min(40vw, 660px);
+    animation: hero-enter 760ms 110ms both cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-page .hero-eyebrow {
+    margin-bottom: 24px;
+    font-size: 10px;
+    letter-spacing: 2.6px;
+}
+
+.home-page .hero h1 {
+    max-width: 650px;
+    font-size: clamp(50px, 5vw, 78px);
+    line-height: 1.01;
+    letter-spacing: -0.8px;
+    margin-bottom: 27px;
+}
+
+.home-page .hero h1 em {
+    font-weight: 500;
+    letter-spacing: -1.1px;
+}
+
+.home-page .hero-content > .hero-intro {
+    max-width: 535px;
+    margin-bottom: 38px;
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.home-page .hero-buttons {
+    gap: 14px;
+}
+
+.home-page .hero .btn,
+.home-page .hero .btn-outline {
+    min-height: 52px;
+    padding: 15px 26px;
+    border-radius: 1px;
+    font-size: 10px;
+    letter-spacing: 1.55px;
+    transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease,
+        border-color 220ms ease, color 220ms ease;
+}
+
+.home-page .hero .btn:hover {
+    background: var(--gold-light);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+    transform: translateY(-2px);
+}
+
+.home-page .hero .btn-outline:hover {
+    border-color: var(--gold-light);
+    background: rgba(201, 168, 76, 0.1);
+    color: var(--gold-pale);
+    transform: translateY(-2px);
+}
+
+.home-page .hero-assurances {
+    gap: 12px 22px;
+    margin-top: 48px;
+    padding-top: 19px;
+}
+
+@keyframes hero-enter {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+    .home-page .hero {
+        min-height: 720px;
+        padding: 148px 8vw 80px;
+    }
+
+    .home-page .hero-content {
+        width: min(66vw, 600px);
+        min-width: 0;
+    }
+
+    .home-page .hero-bg {
+        background-position: 58% center;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-page header .container,
+    .home-page header.is-scrolled .container {
+        min-height: 76px;
+        padding: 8px 20px;
+    }
+
+    .home-page .logo img,
+    .home-page header.is-scrolled .logo img {
+        height: 56px;
+    }
+
+    .home-page nav {
+        gap: clamp(9px, 2vw, 15px);
+    }
+
+    .home-page header nav a {
+        font-size: 8.5px;
+        letter-spacing: 0.7px;
+    }
+
+    .home-page .hero {
+        min-height: 700px;
+        padding: 132px 24px 62px;
+    }
+
+    .home-page .hero-content {
+        width: min(100%, 560px);
+    }
+
+    .home-page .hero-bg {
+        background-position: 57% center;
+    }
+}
+
+@media (max-width: 520px) {
+    .home-page .hero {
+        min-height: 680px;
+        padding: 122px 20px 52px;
+    }
+
+    .home-page .hero h1 {
+        font-size: clamp(42px, 11vw, 56px);
+        line-height: 1.04;
+        letter-spacing: -0.5px;
+    }
+
+    .home-page .hero-content > .hero-intro {
+        margin-bottom: 30px;
+        font-size: 14.5px;
+        line-height: 1.78;
+    }
+
+    .home-page .hero .btn,
+    .home-page .hero .btn-outline {
+        min-height: 50px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-page *,
+    .home-page *::before,
+    .home-page *::after {
+        scroll-behavior: auto;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ===================================================
+   Sprint 3A.2 — Homepage hero and navigation refinement
+=================================================== */
+
+header .container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.logo img {
+    height: 92px;
+}
+
+nav {
+    gap: 28px;
+}
+
+header nav a {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.35px;
+}
+
+.hero {
+    min-height: 760px;
+    padding-top: 178px;
+    padding-bottom: 72px;
+}
+
+.hero-content {
+    width: min(680px, 100%);
+}
+
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+}
+
+.hero-eyebrow::before {
+    width: 28px;
+    height: 1px;
+    background: currentColor;
+    content: '';
+}
+
+.hero h1 {
+    max-width: 650px;
+    font-size: clamp(46px, 5vw, 72px);
+    line-height: 1.04;
+    margin-bottom: 22px;
+    text-wrap: balance;
+}
+
+.hero h1 em {
+    color: var(--gold-light);
+}
+
+.hero-content > .hero-intro {
+    max-width: 570px;
+    margin: 0 0 32px;
+    color: rgba(255,255,255,0.86);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.hero-buttons {
+    justify-content: flex-start;
+}
+
+.hero-assurances {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    margin-top: 44px;
+    padding: 18px 0 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    list-style: none;
+}
+
+.hero-assurances li {
+    color: rgba(255,255,255,0.82);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.15px;
+    text-transform: uppercase;
+}
+
+.hero-assurances li::before {
+    margin-right: 8px;
+    color: var(--gold);
+    content: '◆';
+    font-size: 7px;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        min-height: 700px;
+        padding-top: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 62px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    header nav a {
+        font-size: 9px;
+        letter-spacing: 0.75px;
+    }
+
+    .hero {
+        min-height: 680px;
+        padding: 132px 24px 56px;
+        background-position: 58% center;
+    }
+
+    .hero-bg {
+        background-position: 59% center;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 11.5vw, 58px);
+    }
+
+    .hero-content > .hero-intro {
+        max-width: 480px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero-assurances {
+        display: grid;
+        gap: 11px;
+        margin-top: 32px;
+    }
+
+    .hero-eyebrow {
+        margin-bottom: 16px;
+        font-size: 9px;
+        letter-spacing: 1.8px;
     }
 }
