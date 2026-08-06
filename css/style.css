@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
-
 :root {
   --green-dark: #0d2b1a;
   --green-mid: #1a4a2e;
@@ -440,7 +438,7 @@ section {
 }
 
 /* Sprint 3A.4 Trust Strip */
-
+/*
 .trust-strip{
     background:var(--green-mid);
     border-top:1px solid rgba(201,168,76,.15);
@@ -500,7 +498,7 @@ section {
     text-transform:uppercase;
     line-height:1.5;
 }
-
+*/
 .trust-item {
   display: flex;
   align-items: center;
@@ -561,6 +559,23 @@ section {
   align-items: center;
   justify-content: center;
 }
+
+.about-img-main picture,
+.about-img-main img,
+.about-img-overlay picture,
+.about-img-overlay img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.about-img-main img,
+.about-img-overlay img {
+  object-fit: cover;
+}
+
+.about-img-main img { object-position: center; }
+.about-img-overlay img { object-position: center; }
 
 .about-img-overlay {
   position: absolute;
@@ -1097,6 +1112,36 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.mfg-photo {
+  margin: 0;
+  display: block;
+}
+
+.mfg-photo picture,
+.mfg-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.mfg-photo img {
+  object-fit: cover;
+}
+
+.mfg-photo figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 28px 22px 18px;
+  background: linear-gradient(transparent, rgba(6, 15, 8, 0.88));
+  color: rgba(255,255,255,0.9);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
 }
 
 .mfg-visual--details{
@@ -1820,6 +1865,42 @@ footer {
     box-shadow: 0 22px 50px rgba(0,0,0,0.18);
 }
 
+.species-photo,
+.species-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.species-photo {
+  position: absolute;
+  inset: 0;
+}
+
+.species-photo img {
+  object-fit: cover;
+  object-position: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+header nav a:focus-visible,
+.logo:focus-visible {
+  outline: 3px solid var(--gold-light);
+  outline-offset: 4px;
+}
+
 .species-card:hover {
     transform: none;
     box-shadow: 0 22px 50px rgba(0,0,0,0.18);
@@ -1898,6 +1979,23 @@ footer {
 }
 
 @media (max-width: 520px) {
+    header .container {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .logo img {
+        height: 52px;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    header nav a {
+        font-size: 8px;
+        letter-spacing: 0.45px;
+    }
     .btn,
     .btn-primary,
     .btn-outline {

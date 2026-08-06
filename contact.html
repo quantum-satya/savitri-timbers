@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Savitri Timbers</title>
+    <meta name="description" content="Contact Savitri Timbers in Rajasthan to discuss premium timber sourcing, hardwood flooring and project requirements.">
+    <meta property="og:title" content="Contact Savitri Timbers">
+    <meta property="og:description" content="Discuss premium timber sourcing, hardwood flooring and project requirements with Savitri Timbers.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="64x64">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,18 +22,20 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="Savitri Timbers Logo">
+                    <img src="images/logo-mark.png" width="200" height="200" alt="Savitri Timbers Logo">
                 </a>
             </div>
 
-            <nav>
+            <nav aria-label="Primary navigation">
                 <a href="index.html">Home</a>
                 <a href="about.html">About Us</a>
                 <a href="products.html">Products</a>
-                <a href="contact.html" class="active">Contact</a>
+                <a href="contact.html" class="active" aria-current="page">Contact</a>
             </nav>
         </div>
     </header>
+
+    <main>
 
     <!-- CONTACT HERO -->
     <section class="hero">
@@ -165,31 +175,31 @@
 
         <div>
 
-            <form action="#" method="post">
+            <form action="mailto:karan@savitriagro.com" method="post" enctype="text/plain">
 
                 <div class="mfg-features">
 
                     <div class="mfg-feat">
-                        <h5>Full Name</h5>
-                        <input type="text" name="fullname"
+                        <label for="fullname">Full Name</label>
+                        <input id="fullname" type="text" name="fullname" autocomplete="name" required
                                style="width:100%;padding:12px;border:none;background:rgba(255,255,255,0.08);color:white;">
                     </div>
 
                     <div class="mfg-feat">
-                        <h5>Company Name</h5>
-                        <input type="text" name="company"
+                        <label for="company">Company Name</label>
+                        <input id="company" type="text" name="company" autocomplete="organization"
                                style="width:100%;padding:12px;border:none;background:rgba(255,255,255,0.08);color:white;">
                     </div>
 
                     <div class="mfg-feat">
-                        <h5>Email Address</h5>
-                        <input type="email" name="email"
+                        <label for="email">Email Address</label>
+                        <input id="email" type="email" name="email" autocomplete="email" required
                                style="width:100%;padding:12px;border:none;background:rgba(255,255,255,0.08);color:white;">
                     </div>
 
                     <div class="mfg-feat">
-                        <h5>Phone Number</h5>
-                        <input type="tel" name="phone"
+                        <label for="phone">Phone Number</label>
+                        <input id="phone" type="tel" name="phone" autocomplete="tel"
                                style="width:100%;padding:12px;border:none;background:rgba(255,255,255,0.08);color:white;">
                     </div>
 
@@ -197,9 +207,9 @@
 
                 <div class="mfg-feat" style="margin-top:20px;">
 
-                    <h5>Message</h5>
+                    <label for="message">Message</label>
 
-                    <textarea name="message" rows="6"
+                    <textarea id="message" name="message" rows="6" required
                               style="width:100%;padding:12px;border:none;background:rgba(255,255,255,0.08);color:white;"></textarea>
 
                 </div>
@@ -306,6 +316,8 @@
 
     </section>
 
+    </main>
+
     <!-- FOOTER -->
     <footer>
 
@@ -398,4 +410,3 @@
 
 </body>
 </html>
-

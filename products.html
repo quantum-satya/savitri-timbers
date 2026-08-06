@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products | Savitri Timbers</title>
+    <meta name="description" content="Explore Savitri Timbers' premium hardwood and softwood portfolio, including teak, maple, oak, ash, beech and pine.">
+    <meta property="og:title" content="Products | Savitri Timbers">
+    <meta property="og:description" content="A curated portfolio of premium hardwood and softwood species for flooring and architectural projects.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="64x64">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;600;700;1,400;1,600&amp;family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/products.css">
@@ -14,14 +22,14 @@
 <!-- Header -->
 <header>
     <div class="container">
-        <div class="logo">
-            <img src="images/logo.png" alt="Savitri Timbers Logo">
-        </div>
+        <a class="logo" href="index.html" aria-label="Savitri Timbers home">
+            <img src="images/logo-mark.png" width="200" height="200" alt="Savitri Timbers Logo">
+        </a>
 
-        <nav>
+        <nav aria-label="Primary navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-            <a href="products.html" class="active">Products</a>
+            <a href="products.html" class="active" aria-current="page">Products</a>
             <!-- in next phase, we can add these pages and links
             <a href="flooring.html">Flooring Solutions</a>
             <a href="sourcing.html">Global Sourcing</a>
@@ -123,8 +131,10 @@
             <div class="species-grid">
 
                 <div class="species-card teak">
-                    <div class="species-bg"></div>
-                    <div class="wood-grain"></div>
+                    <picture class="species-photo">
+                        <source srcset="assets/images/manufacturing/teak-raw-boards-shri-madhopur.jpg" type="image/jpeg">
+                        <img src="assets/images/manufacturing/teak-raw-boards-shri-madhopur.png" width="976" height="1612" loading="lazy" decoding="async" alt="Raw teak hardwood boards at Savitri Timbers' Rajasthan facility">
+                    </picture>
 
                     <div class="species-info">
                         <div class="species-name">Teak</div>
@@ -135,10 +145,16 @@
                 </div>
 
                 <div class="species-card maple">
-                    <div class="species-bg"></div>
-                    <div class="wood-grain"></div>
 
-                    <div class="species-info">
+    <picture class="species-photo">
+        <img
+            src="assets/images/products/hard-maple-white.png"
+            loading="lazy"
+            decoding="async"
+            alt="Canadian Hard Maple lumber">
+    </picture>
+
+    <div class="species-info">
                         <div class="species-name">Maple</div>
                         <div class="species-origin">
                             USA · Canada
@@ -147,10 +163,16 @@
                 </div>
 
                 <div class="species-card pine">
-                    <div class="species-bg"></div>
-                    <div class="wood-grain"></div>
 
-                    <div class="species-info">
+    <picture class="species-photo">
+        <img
+            src="assets/images/products/pine-finished-termite-treated.png"
+            loading="lazy"
+            decoding="async"
+            alt="Finished termite treated pine timber">
+    </picture>
+
+    <div class="species-info">
                         <div class="species-name">Pine</div>
                         <div class="species-origin">
                             USA · Latin America
@@ -522,7 +544,7 @@
 
             <div class="footer-brand">
 
-                <img src="images/logo.png"
+                <img src="images/logo-mark.png" width="200" height="200"
                      alt="Savitri Timbers"
                      style="height:100px; margin-bottom:20px;">
 
