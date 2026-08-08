@@ -10,10 +10,12 @@
 |----------|-------|
 | **Project** | Savitri Timbers Digital Platform (STDP) |
 | **Repository Status** | Active Development |
+| **Production Release** | v1.3.1 |
+| **Production URL** | https://savitriagro.com |
 | **Current Phase** | Phase 3 – Website Implementation |
-| **Current Sprint** | Sprint 3.1 – Homepage Enhancement |
-| **Primary Business Goal** | Position Savitri Sports Flooring as the homepage focus |
-| **Last Updated** | 2026-07-23 |
+| **Current Sprint** | Documentation Sprint D1 – v1.3.1 Production Governance Synchronization |
+| **Primary Business Goal** | Synchronize documentation with v1.3.1 production |
+| **Last Updated** | 2026-08-08 |
 
 ---
 
@@ -34,39 +36,38 @@ The project follows a documentation-first approach where governance, architectur
 - ✅ Phase 2B – Homepage Transformation
 - ✅ Phase 2C – Website Architecture
 - ✅ Phase 2D – Repository Governance & AI Collaboration Framework
+- ✅ Phase 3 Sprint 3.1 – Homepage Enhancement
+- ✅ Phase 3 Sprint 3A.4 – Homepage Trust & Credibility
+- ✅ Production Release v1.3.1
 
 ---
 
 ## Current Focus
 
-### Phase 3 – Website Implementation
+### Documentation Sprint D1 – v1.3.1 Production Governance Synchronization
 
 Current objective:
 
-> Deliver business value through incremental website improvements.
-
-Current Sprint:
-
-**Sprint 3.1 – Homepage Enhancement**
+> Synchronize operational and governance documentation with the v1.3.1 production release.
 
 Primary tasks:
 
-- Highlight Savitri Sports Flooring as the homepage focus.
-- Improve homepage messaging.
-- Prepare reusable page structure for future development.
+- Populate CHANGELOG with releases through v1.3.1.
+- Close completed Phase 3 homepage sprints in project status and roadmap.
+- Update DECISIONS implementation statuses.
+- Register AI-GOVERNANCE.md and Cursor rules v1 in the Document Registry.
 
 ---
 
 # Next Planned Work
 
-Following Sprint 3.1:
+Following Documentation Sprint D1:
 
-1. Global Navigation
-2. Shared Layout
-3. Lead Generation Improvements
-4. Product Pages
-5. Contact Experience
-6. SEO Enhancements
+1. Business documentation alignment (homepage content, product catalog)
+2. Architecture information architecture documentation
+3. DEPLOYMENT.md operational guidance
+4. Brand design system chapter backfill (color, typography, components)
+5. Manufacturing page documentation (Sprint 4.1A work in progress locally)
 
 ---
 
@@ -75,9 +76,9 @@ Following Sprint 3.1:
 | Item | Status |
 |------|--------|
 | Governance | ✅ Stable |
-| Documentation | ✅ Baseline Complete |
-| Architecture | ✅ Approved |
-| Website Implementation | 🚧 In Progress |
+| Documentation | 🚧 Synchronizing with v1.3.1 |
+| Architecture | ✅ Approved (index); sub-documents pending |
+| Website Implementation | ✅ v1.3.1 deployed; Phase 3 continuing |
 
 ---
 
@@ -91,13 +92,13 @@ main
 
 # Definition of Done (Current Sprint)
 
-Sprint 3.1 will be complete when:
+Documentation Sprint D1 will be complete when:
 
-- Homepage prominently features Savitri Sports Flooring.
-- Homepage messaging reflects the updated business positioning.
-- Changes are reviewed.
-- Changes are committed.
-- Website is deployed.
+- CHANGELOG records all significant releases through v1.3.1.
+- PROJECT_STATUS, ROADMAP, and DECISIONS reflect completed Phase 3 homepage work.
+- DOCUMENT-REGISTRY registers AI-GOVERNANCE.md and `.cursor/rules/v1/`.
+- KNOWLEDGE-HIERARCHY and README reflect current repository structure.
+- Changes are reviewed (not committed until approved).
 
 ---
 
@@ -109,11 +110,11 @@ None.
 
 # Notes
 
-The governance foundation has been established.
+Production at v1.3.1 matches the committed `main` branch.
+
+Local uncommitted work (Manufacturing page) is out of scope for Sprint D1 and remains undocumented until implemented and deployed.
 
 Future documentation should support implementation rather than delay business delivery.
-
-Primary focus is now on delivering measurable improvements to the website through small, reviewable implementation sprints.
 
 ---
 

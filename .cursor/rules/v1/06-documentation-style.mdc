@@ -1,0 +1,30 @@
+---
+description: Documentation writing standards
+globs:
+  - "docs/**/*.md"
+alwaysApply: true
+---
+
+# Documentation Style
+
+Write documentation for future maintainers.
+
+Be factual.
+
+Avoid marketing language.
+
+Prefer concise explanations.
+
+Update version numbers where appropriate.
+
+Preserve document structure.
+
+Never delete historical information.
+
+Mark deprecated content rather than silently removing it.
+
+Maintain consistent terminology.
+
+Use headings consistently.
+
+Keep markdown clean.

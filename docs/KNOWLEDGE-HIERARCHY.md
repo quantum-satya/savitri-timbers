@@ -13,13 +13,13 @@
 | **Filename** | `docs/KNOWLEDGE-HIERARCHY.md` |
 | **Version** | 2.0 |
 | **Status** | Draft |
-| **Phase** | Phase 2D – Repository Governance & AI Collaboration Framework |
+| **Phase**          | Phase 3 Complete / Phase 4 Initiated    |
 | **Document Owner** | Project Architect |
 | **Reviewer(s)** | Satya Pal |
 | **Approver(s)** | Pending |
 | **Effective Date** | Pending |
-| **Last Updated** | 2026-07-08 |
-| **Next Review** | Before Phase 3 completion |
+| **Last Updated** | 2026-08-08 |
+| **Next Review** | Before completion of Phase 4 |
 
 ---
 
@@ -44,7 +44,7 @@ It applies to:
 - Documentation standards
 - Documentation authority and precedence
 - Project governance
-- AI collaboration
+- AI collaboration and AI governance
 - Architecture documentation
 - Business documentation
 - Brand documentation
@@ -102,7 +102,7 @@ Every change within the STDP repository shall follow these principles:
 6. **Maintain documentation and implementation together.**
 7. **Preserve a complete and traceable project history.**
 
-These principles apply equally to human contributors, ChatGPT, Codex, and any future AI collaborators.
+These principles apply equally to human contributors, ChatGPT, Codex, Cursor, and any future AI collaborators.
 
 ---
 
@@ -114,6 +114,7 @@ The current physical repository structure remains intentionally simple:
 
 ```text
 docs/
+├── AI-GOVERNANCE.md
 ├── AI-INSTRUCTIONS.md
 ├── BRAND-GUIDE.md
 ├── CHANGELOG.md
@@ -135,8 +136,17 @@ docs/
 ├── architecture/
 ├── brand/
 └── business/
-
+├── design/
+└── releases/
 ```
+
+AI governance is defined in:
+
+docs/AI-GOVERNANCE.md
+
+The current machine-enforceable AI rule set is maintained under:
+
+.cursor/rules/v1/
 ---
 
 ## Documentation Layers

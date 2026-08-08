@@ -1,0 +1,35 @@
+---
+description: Documentation governance for STDP
+globs:
+  - "docs/**/*.md"
+alwaysApply: true
+---
+
+# Documentation First
+
+The documentation is the source of truth.
+
+## General Rules
+
+- Never update code and documentation in the same task unless explicitly requested.
+- Documentation must only describe completed or production-ready work.
+- Never document features that are still under development.
+- Preserve historical decisions and project history.
+- Prefer updating existing documents over creating new ones.
+- Keep document structure and writing style consistent.
+- Maintain valid internal references.
+- Do not rename documentation files unless explicitly instructed.
+
+## STDP Rules
+
+- Treat the production website as the authoritative reference.
+- Reconcile documentation against the current repository before editing.
+- Preserve documentation-first development principles.
+- Keep updates factual rather than promotional.
+- Mark assumptions clearly instead of presenting them as facts.
+
+## Git Rules
+
+- Never commit changes.
+- Never push changes.
+- Leave all edits uncommitted for review.

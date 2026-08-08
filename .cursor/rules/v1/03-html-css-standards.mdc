@@ -1,0 +1,69 @@
+---
+description: HTML, CSS and Frontend Standards for STDP
+globs:
+  - "*.html"
+  - "css/**/*.css"
+alwaysApply: true
+---
+
+# HTML & CSS Standards
+
+The Savitri Timbers website is a premium corporate manufacturing website.
+
+Every implementation must preserve consistency with the existing design language.
+
+---
+
+## HTML
+
+- Use semantic HTML5.
+- Maintain proper heading hierarchy.
+- Prefer reusable existing structures.
+- Keep markup clean and readable.
+- Avoid unnecessary wrapper elements.
+- Use descriptive class names that match the existing architecture.
+- Preserve accessibility.
+- Images must always include meaningful alt text.
+- Avoid inline styles.
+
+---
+
+## CSS
+
+- Reuse existing CSS variables.
+- Reuse existing utility classes whenever possible.
+- Minimize new CSS.
+- Never duplicate existing styles.
+- Keep selectors simple.
+- Preserve responsive behaviour.
+- Mobile-first where appropriate.
+- Preserve existing spacing rhythm.
+- Preserve typography scale.
+- Preserve the existing color palette.
+- Do not introduce new design systems.
+
+---
+
+## JavaScript
+
+- Avoid JavaScript unless absolutely necessary.
+- Never replace HTML/CSS solutions with JavaScript.
+- Do not introduce frameworks.
+
+---
+
+## Performance
+
+- Prefer lightweight solutions.
+- Avoid unnecessary DOM complexity.
+- Reuse existing components.
+- Optimize images when requested.
+
+---
+
+## Accessibility
+
+- Keyboard accessible.
+- Semantic landmarks.
+- Maintain color contrast.
+- Preserve focus styles.

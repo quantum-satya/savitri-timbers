@@ -18,7 +18,7 @@
 | **Reviewer(s)** | Satya Pal |
 | **Approver(s)** | Satya Pal |
 | **Effective Date** | 2026-07-23 |
-| **Last Updated** | 2026-07-17 |
+| **Last Updated** | 2026-08-08 |
 | **Next Review** | Before Phase 3 completion |
 
 ## Registry Philosophy
@@ -77,9 +77,9 @@ Each governed document belongs to exactly one governance domain and one authorit
 
 | Document ID | Document | Governance Domain | Authority Layer | Status | Version |
 | --- | --- | --- | --- | --- | --- |
-| GOV-001 | docs | `PROJECT.md` | Project Architect | Approved | 1.0 |  |
-| GOV-002 | docs | `KNOWLEDGE-HIERARCHY.md` | Project Architect | Approved | 2.0 | 2026-07-17 |
-| GOV-003 | docs | `DECISIONS.md` | Project Architect | Approved | 1.0 |  |
+| GOV-001 | docs | `PROJECT.md` | Governance | Project Governance | Approved | 1.0 |  |
+| GOV-002 | docs | `KNOWLEDGE-HIERARCHY.md` | Governance | Repository Constitution | Approved | 2.0 | 2026-08-08 |
+| GOV-003 | docs | `DECISIONS.md` | Governance | Project Governance | Approved | 1.0 | 2026-08-08 |
 
 
 ## Business
@@ -114,15 +114,25 @@ Each governed document belongs to exactly one governance domain and one authorit
 ## AI
 
 | Document ID | Folder | Document | Role | Status | Version | Last Updated |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- |
 | AI-010 | docs | `AI-INSTRUCTIONS.md` | AI Governance Lead | Draft | 1.0 |  |
 | AI-020 | docs | `CODEX-WORKFLOW.md` | AI Governance Lead | Review | 1.0 |  |
+| AI-030 | docs | `AI-GOVERNANCE.md` | AI Governance Lead | Approved | 1.0 | 2026-08-08 |
+| AI-031 | .cursor/rules/v1 | Machine rules (Cursor v1) | AI Governance Lead | Approved | 1.0 | 2026-08-08 |
+
+## Development
+
+| Document ID | Folder | Document | Role | Status | Version | Last Updated |
+| --- | --- | --- | --- | --- | --- | --- |
+| DEV-010 | docs | `SETUP.md` | Development Lead | Approved | 1.0 | 2026-07-07 |
+| DEV-020 | docs | `ENVIRONMENT.md` | Development Lead | Approved | 1.0 | 2026-07-07 |
 
 ## Reference
 
 | Document ID | Folder | Document | Role | Status | Version | Last Updated |
-| --- | --- | --- | --- | --- | --- |
-| REF-000 | DOCUMENT-REGISTRY.md | Project Documentation Lead | Approved | 2.0 | 2026-07-05 |
+| --- | --- | --- | --- | --- | --- | --- |
+| REF-000 | docs | `DOCUMENT-REGISTRY.md` | Project Documentation Lead | Approved | 2.0 | 2026-08-08 |
+| REF-001 | docs | `README.md` | Project Documentation Lead | Approved | 1.0 | 2026-08-08 |
 | REF-010 | docs | `CONTENT-GUIDE.md` | Content Strategist | Draft | 1.0 |  |
 | REF-020 | docs | `GLOSSARY.md` | Project Documentation Lead | Draft | 1.0 |  |
 | REF-030 | docs | `BRAND-GUIDE.md` | Brand Owner | Review | 1.0 |  |
@@ -130,11 +140,12 @@ Each governed document belongs to exactly one governance domain and one authorit
 ## Operations
 
 | Document ID | Folder | Document | Role | Status | Version | Last Updated |
-| --- | --- | --- | --- | --- | --- |
-| OPS-010 | docs | `ROADMAP.md` | Project Manager | Draft | 1.0 |  |
-| OPS-020 | docs | `CHANGELOG.md` | Development Lead | Draft | 1.0 |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| OPS-010 | docs | `ROADMAP.md` | Project Manager | Draft | 1.0 | 2026-08-08 |
+| OPS-020 | docs | `CHANGELOG.md` | Development Lead | Draft | 1.0 | 2026-08-08 |
 | OPS-030 | docs | `TODO.md` | Project Manager | Draft | 1.0 |  |
 | OPS-040 | docs | `DEPLOYMENT.md` | Development Lead | Draft | 1.0 |  |
+| OPS-050 | docs | `PROJECT_STATUS.md` | Project Manager | Approved | 1.0 | 2026-08-08 |
 
 ---
 

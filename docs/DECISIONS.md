@@ -11,7 +11,7 @@ Reviewers:
 Approved By:
 
 
-Last Updated:
+Last Updated: 2026-08-08
 
 
 ## Purpose
@@ -265,6 +265,10 @@ Management requested immediate visibility for the Sports Flooring business witho
 
 The implementation serves as a hotfix while preserving the existing navigation structure.
 
+## Implementation Status
+
+Complete — deployed in production (v1.3, July 2026).
+
 ---
 
 # DEC-2026-008
@@ -403,7 +407,7 @@ Affected Documents:
 - business/03-homepage-content.md
 
 Implementation Status:
-Pending
+Complete — Canadian Hard Maple featured on homepage product portfolio (v1.3, July 2026).
 
 ## DEC-2026-013
 
@@ -436,28 +440,103 @@ Status
 Approved
 
 ---
-DEC-2026-003
 
-Title
+# DEC-2026-014
+
+## Title
 
 Documentation Governance Migration Complete
 
-Decision
+## Status
+
+Approved
+
+## Date
+
+July 2026
+
+## Decision
 
 The STDP repository has adopted a documentation-first governance model with:
 
-• Knowledge Hierarchy
-• Business Approval Gate
-• Standard Metadata
-• Document IDs
-• Document Registry
-• AI Governance Rules
+- Knowledge Hierarchy
+- Business Approval Gate
+- Standard Metadata
+- Document IDs
+- Document Registry
+- AI Governance Rules
 
-Reason
+## Reason
 
 To ensure every future implementation is traceable to approved business documentation.
 
-Status
+## Implementation Status
+
+Complete — Phase 2D tagged `v1.3-governance-complete` (July 2026).
+
+---
+
+# DEC-2026-015
+
+## Title
+
+Production Release v1.3.1
+
+## Status
 
 Approved
+
+## Date
+
+July 2026
+
+## Decision
+
+Release v1.3.1 as the current production version of the Savitri Timbers website at https://savitriagro.com.
+
+## Reason
+
+Sprint 3A.4 homepage trust and credibility work is complete, reviewed, and ready for production.
+
+## Implementation Status
+
+Complete — deployed to Cloudflare Pages (tag `v1.3.1`).
+
+---
+
+# DEC-2026-016
+
+## Title
+
+AI Governance Specification
+
+## Status
+
+Approved
+
+## Date
+
+August 2026
+
+## Decision
+
+Adopt `docs/AI-GOVERNANCE.md` as the human-readable AI governance specification.
+
+Machine-enforceable rules are maintained in `.cursor/rules/v1/`.
+
+## Reason
+
+To keep human governance policy and Cursor rule enforcement synchronized while supporting documentation-first, review-before-commit development.
+
+## Affected Documents
+
+- AI-GOVERNANCE.md
+- `.cursor/rules/v1/`
+- AI-INSTRUCTIONS.md
+- CODEX-WORKFLOW.md
+
+## Implementation Status
+
+Complete — approved 08 August 2026.
+
 ---

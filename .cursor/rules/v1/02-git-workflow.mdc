@@ -1,0 +1,32 @@
+---
+description: Git workflow rules for STDP
+alwaysApply: true
+---
+
+# Git Workflow
+
+Git history is part of the project documentation.
+
+## Branches
+
+- Never create branches unless explicitly instructed.
+- Respect the current Git workflow.
+
+## Commits
+
+- Never create commits.
+- Never generate commit messages automatically.
+- Never push changes.
+- Never merge branches.
+
+## Changes
+
+- Leave all modifications uncommitted.
+- Make small, reviewable changes.
+- Minimize unrelated file modifications.
+- Never reformat files that were not intentionally edited.
+
+## Safety
+
+- Do not delete files unless explicitly instructed.
+- Do not overwrite user changes.

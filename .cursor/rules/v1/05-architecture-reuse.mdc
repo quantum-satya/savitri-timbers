@@ -1,0 +1,39 @@
+---
+description: Architecture reuse rules
+alwaysApply: true
+---
+
+# Architecture Reuse
+
+The existing repository architecture is the source of truth.
+
+## Reuse
+
+Always reuse:
+
+- navigation
+- footer
+- hero patterns
+- cards
+- grids
+- buttons
+- typography
+- responsive utilities
+- CSS variables
+
+## Do Not
+
+- redesign existing pages
+- create duplicate components
+- create alternate layouts when reusable ones exist
+- introduce parallel CSS systems
+
+## Implementation
+
+Before creating anything new:
+
+1. Search the repository.
+2. Reuse an existing component if suitable.
+3. Create a new component only when no reusable solution exists.
+
+Consistency is more important than novelty.

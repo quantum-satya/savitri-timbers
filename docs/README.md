@@ -1,17 +1,19 @@
 # STDP Documentation
 
 Document ID: REF-001
-Version: 1.0
+Version: 1.1
 Status: Approved
 Role: Project Documentation Lead
 
 Reviewers:
+
 - Satya Pal
 
 Approved By:
+
 - Satya Pal
 
-Last Updated: 2026-07-05
+Last Updated: 2026-08-08
 
 ---
 
@@ -20,6 +22,8 @@ Last Updated: 2026-07-05
 The Savitri Timbers Digital Platform (STDP) is the digital foundation for Savitri Timbers Pvt. Ltd.
 
 It follows a documentation-first development model, where business strategy, governance, architecture, and implementation evolve together through a structured review and approval process.
+
+The current production baseline is Version 1.3.1.
 
 ## Purpose
 
@@ -38,10 +42,11 @@ This documentation defines:
 - Business strategy
 - Brand identity
 - Website content
-- AI development workflow
+- AI development governance and workflow
 - Project governance
 - Development roadmap
 - Operational procedures
+- Release history
 
 It does not contain application source code.
 
@@ -54,37 +59,58 @@ This document is the entry point to the STDP documentation system.
 - PROJECT.md
 - KNOWLEDGE-HIERARCHY.md
 - DOCUMENT-REGISTRY.md
+- AI-GOVERNANCE.md
+- CHANGELOG.md
 
 ---
 
 # Documentation Structure
 
-```
+```text
 docs/
 │
 ├── README.md
+├── AI-GOVERNANCE.md
+├── AI-INSTRUCTIONS.md
 ├── PROJECT.md
+├── PROJECT_STATUS.md
 ├── KNOWLEDGE-HIERARCHY.md
 ├── DOCUMENT-REGISTRY.md
-│
-├── business/
-│   ├── README.md
-│   ├── ...
-│
-├── brand/
-│   ├── README.md
-│   ├── ...
-│
-├── AI-INSTRUCTIONS.md
-├── CODEX-WORKFLOW.md
+├── DECISIONS.md
 ├── ROADMAP.md
 ├── CHANGELOG.md
 ├── TODO.md
-└── DEPLOYMENT.md
-```
+├── CODEX-WORKFLOW.md
+├── CONTENT-GUIDE.md
+├── BRAND-GUIDE.md
+├── DEPLOYMENT.md
+├── ENVIRONMENT.md
+├── SETUP.md
+├── GLOSSARY.md
+│
+├── architecture/
+├── brand/
+├── business/
+├── design/
+└── releases/
+
+AI governance is additionally implemented through the versioned rule set:
+.cursor/
+└── rules/
+    └── v1/
+---
+
+
 
 ---
 
+# 3. Restore the numbered Reading Order
+
+Your diff shows that the numbering disappeared.
+
+It should be:
+
+```markdown
 # Reading Order
 
 For new contributors and AI agents:
@@ -92,11 +118,16 @@ For new contributors and AI agents:
 1. README.md
 2. PROJECT.md
 3. KNOWLEDGE-HIERARCHY.md
-4. DOCUMENT-REGISTRY.md
-5. Business Documentation
-6. Brand Documentation
-7. AI Documentation
-8. Operational Documentation
+4. PROJECT_STATUS.md
+5. DOCUMENT-REGISTRY.md
+6. AI-GOVERNANCE.md
+7. AI-INSTRUCTIONS.md
+8. Business Documentation
+9. Architecture Documentation
+10. Brand Documentation
+11. Content Documentation
+12. Operational Documentation
+13. Release Documentation
 
 ---
 
@@ -116,11 +147,11 @@ Business Approval
 
 ↓
 
-Codex Implementation
+AI-Assisted Implementation
 
 ↓
 
-ChatGPT Review
+Human Review
 
 ↓
 
@@ -132,8 +163,9 @@ Deployment
 
 ↓
 
-Changelog Update
+Changelog / Release Documentation Update
 
+AI tools may assist with planning, implementation, analysis, documentation, and review, but human approval remains required before committing and deploying changes.
 ---
 
 # Documentation Principles
@@ -143,6 +175,9 @@ Changelog Update
 - Approved documents are the source of truth.
 - Every governed document has a unique Document ID.
 - Every implementation should be traceable to approved documentation.
+- Completed production work must be reflected in the appropriate documentation.
+- Unfinished work must not be documented as completed production functionality.
+- Historical decisions and release history should be preserved.
 
 ---
 
