@@ -2450,3 +2450,176 @@ header nav a {
         letter-spacing: 1.8px;
     }
 }
+
+/* ── Sprint 4.1A: Manufacturing page foundation ── */
+.manufacturing-page .manufacturing-hero .hero-bg {
+    background-image: linear-gradient(90deg, rgba(7,17,14,.84) 0%, rgba(7,17,14,.58) 48%, rgba(7,17,14,.25) 100%), url("../assets/images/manufacturing/teak-flooring-bundles-shri-madhopur.jpg");
+    background-position: center;
+}
+
+.process-flow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 28px;
+    margin-top: 42px;
+    list-style: none;
+    counter-reset: process;
+}
+
+.process-flow li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gold-pale);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+}
+
+.process-flow li::before {
+    color: var(--gold);
+    content: counter(process, decimal-leading-zero);
+    counter-increment: process;
+}
+
+.process-flow li:not(:last-child)::after {
+    color: var(--gold);
+    content: '→';
+    font-size: 15px;
+}
+
+.mfg-timeline {
+    display: grid;
+    gap: 24px;
+    margin-top: 52px;
+    padding: 0;
+    list-style: none;
+}
+
+.mfg-timeline li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    min-height: 220px;
+    border: 1px solid rgba(201,168,76,.18);
+    background: rgba(13,43,26,.45);
+}
+
+.mfg-timeline li:nth-child(even) .mfg-timeline-visual { order: 2; }
+.mfg-timeline li:nth-child(even) .mfg-timeline-copy { order: 1; }
+
+.mfg-timeline-visual,
+.mfg-timeline-visual picture,
+.mfg-timeline-visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.mfg-timeline-visual { margin: 0; min-height: 220px; }
+.mfg-timeline-visual img { object-fit: cover; }
+
+.mfg-timeline-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(255,255,255,.035);
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.mfg-timeline-copy {
+    align-self: center;
+    padding: 36px;
+}
+
+.mfg-timeline-copy h3 {
+    margin-bottom: 10px;
+    color: var(--white);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.mfg-timeline-copy p { color: var(--text-light); font-size: 13.5px; }
+
+.precision-quality .trust-card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.oem-manufacturing .country-grid { justify-content: center; }
+
+.mfg-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 48px;
+}
+
+.mfg-gallery-grid figure {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid rgba(201,168,76,.18);
+}
+
+.mfg-gallery-grid picture,
+.mfg-gallery-grid img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.mfg-gallery-grid img { aspect-ratio: 4 / 3; object-fit: cover; }
+
+.mfg-gallery-grid figcaption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 28px 22px 18px;
+    background: linear-gradient(transparent, rgba(6,15,8,.88));
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+    .precision-quality .trust-card-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .mfg-timeline { gap: 16px; margin-top: 36px; }
+    .mfg-timeline li { grid-template-columns: 1fr; }
+    .mfg-timeline li:nth-child(even) .mfg-timeline-visual,
+    .mfg-timeline li:nth-child(even) .mfg-timeline-copy { order: initial; }
+    .mfg-timeline-visual { min-height: 190px; }
+    .mfg-timeline-copy { padding: 26px 22px; }
+    .mfg-gallery-grid { grid-template-columns: 1fr; margin-top: 36px; }
+}
+
+@media (max-width: 520px) {
+    .process-flow { justify-content: flex-start; gap: 12px; }
+    .process-flow li { width: 100%; }
+    .process-flow li::after { display: none; }
+    .mfg-timeline-copy h3 { font-size: 26px; }
+}
+
+@media (max-width: 520px) {
+    header .container,
+    .home-page header .container,
+    .home-page header.is-scrolled .container { padding-right: 12px; padding-left: 12px; }
+    .logo img,
+    .home-page .logo img,
+    .home-page header.is-scrolled .logo img { height: 48px; }
+    nav,
+    .home-page nav { gap: 6px; }
+    header nav a,
+    .home-page header nav a { font-size: 7.5px; letter-spacing: .25px; }
+}
