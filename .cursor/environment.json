@@ -1,0 +1,6 @@
+{
+  "name": "Savitri Timbers",
+  "install": "./.cursor/scripts/install.sh",
+  "start": "./.cursor/scripts/start.sh",
+  "ports": [8000]
+}
