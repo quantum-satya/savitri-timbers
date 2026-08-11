@@ -942,12 +942,17 @@ section {
     );
 }
 
-.white-oak .species-bg {
+.white-oak .species-bg,
+.oak .species-bg {
     background: linear-gradient(160deg, #d8c4a8, #b69474);
 }
 
 .european-oak .species-bg {
     background: linear-gradient(160deg, #c8ae8b, #9d7854);
+}
+
+.meranti .species-bg {
+    background: linear-gradient(160deg, #a86b45, #6e3f28);
 }
 
 .teak .species-bg {
