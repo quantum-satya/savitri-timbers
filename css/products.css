@@ -1,6 +1,7 @@
 /* ==========================================
    PRODUCTS PAGE STYLES
    Savitri Timbers Pvt. Ltd.
+   Sprint 4.2-A — Products
    ========================================== */
 
 
@@ -38,9 +39,15 @@
     color: var(--white);
 }
 
+.products-hero h1 em {
+    color: var(--gold-light);
+    font-style: italic;
+}
+
 .products-hero p:not(.tagline) {
     max-width: 700px;
     margin: 0 auto 40px;
+    color: var(--text-light);
 }
 
 
@@ -53,6 +60,7 @@
         #1a4a2e 100%
     );
     text-align: center;
+    padding: 80px 40px;
 }
 
 .products-intro h2 {
@@ -64,15 +72,192 @@
 
 .products-intro p {
     max-width: 760px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     font-size: 15px;
     line-height: 1.9;
     color: var(--text-light);
     font-weight: 300;
 }
 
+.products-boundary {
+    max-width: 700px;
+    margin: 28px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(201, 168, 76, 0.25);
+    font-size: 14px;
+}
 
-/* ===== FEATURED SPECIES ===== */
+.products-boundary a {
+    color: var(--gold);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.products-boundary a:hover,
+.products-boundary a:focus-visible {
+    color: var(--gold-light);
+}
+
+
+/* ===== FLAGSHIP ===== */
+
+.products-flagship {
+    background: var(--cream);
+    padding: 100px 40px;
+}
+
+.products-flagship .section-tag {
+    color: var(--green-mid);
+}
+
+.products-flagship .section-title {
+    color: var(--green-dark);
+}
+
+.products-flagship .gold-line {
+    margin-bottom: 40px;
+}
+
+.flagship-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 48px;
+    align-items: start;
+    margin-top: 20px;
+}
+
+.flagship-copy p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--green-dark);
+    margin-bottom: 18px;
+    max-width: 560px;
+}
+
+.flagship-points {
+    list-style: none;
+    padding: 0;
+    margin: 28px 0 36px;
+}
+
+.flagship-points li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--green-mid);
+}
+
+.flagship-points li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+}
+
+.flagship-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.flagship-actions .btn-outline {
+    border-color: var(--green-dark);
+    color: var(--green-dark);
+}
+
+.flagship-actions .btn-outline:hover,
+.flagship-actions .btn-outline:focus-visible {
+    background: var(--green-dark);
+    color: var(--white);
+}
+
+.flagship-panel .flagship-visual {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    cursor: default;
+}
+
+.flagship-note {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--green-mid);
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+/* ===== CORE / BROADER PORTFOLIO ===== */
+
+.products-core,
+.products-broader {
+    padding: 100px 40px;
+}
+
+.products-core {
+    background: var(--green-dark);
+}
+
+.products-broader {
+    background: linear-gradient(160deg, #0a1f11 0%, #0d2b1a 55%, #142d1e 100%);
+}
+
+.products-core .section-title,
+.products-broader .section-title,
+.products-core h2,
+.products-broader h2 {
+    color: var(--white);
+}
+
+.products-core h2 em,
+.products-broader h2 em {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.products-core .species-card,
+.products-broader .species-card {
+    cursor: default;
+}
+
+.products-core .species-name,
+.products-broader .species-name {
+    margin: 0;
+    font-size: 24px;
+}
+
+.products-core .species-origin,
+.products-broader .species-origin {
+    margin: 4px 0 0;
+}
+
+.core-detail-grid,
+.broader-detail-grid {
+    margin-top: 48px;
+}
+
+.species-detail-card a {
+    color: var(--gold);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.species-detail-card a:hover,
+.species-detail-card a:focus-visible {
+    color: var(--gold-light);
+}
+
+
+/* ===== FEATURED / DETAIL CARDS ===== */
 
 .featured-species {
     background: var(--green-dark);
@@ -85,23 +270,22 @@
     margin-top: 60px;
 }
 
+.broader-detail-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
 .species-detail-card {
     background: rgba(26, 74, 46, 0.25);
     border: 1px solid rgba(201, 168, 76, 0.15);
     border-top: 3px solid var(--gold);
-
     padding: 40px 36px;
-
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .species-detail-card:hover {
     transform: translateY(-6px);
-
     background: rgba(45, 106, 71, 0.30);
-
-    box-shadow:
-        0 18px 36px rgba(0, 0, 0, 0.20);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.20);
 }
 
 .species-detail-card h3 {
@@ -109,7 +293,6 @@
     font-size: 34px;
     font-weight: 600;
     color: var(--white);
-
     margin-bottom: 24px;
 }
 
@@ -117,13 +300,61 @@
     font-size: 14px;
     line-height: 1.9;
     color: var(--text-light);
-
     margin-bottom: 16px;
 }
 
 .species-detail-card strong {
     color: var(--gold);
     font-weight: 600;
+}
+
+
+/* ===== ON-DEMAND ===== */
+
+.products-ondemand {
+    background: var(--cream);
+    padding: 100px 40px;
+}
+
+.products-ondemand .section-tag {
+    color: var(--green-mid);
+}
+
+.products-ondemand .section-title {
+    color: var(--green-dark);
+}
+
+.products-ondemand-lead {
+    color: var(--green-mid);
+    max-width: 720px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.ondemand-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.ondemand-card {
+    padding: 36px 28px;
+    background: var(--white);
+    border: 1px solid rgba(13, 43, 26, 0.08);
+    border-top: 3px solid var(--gold);
+}
+
+.ondemand-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: var(--green-dark);
+    margin-bottom: 16px;
+}
+
+.ondemand-card p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--green-mid);
 }
 
 
@@ -135,48 +366,117 @@
         #0a1f11 0%,
         #0d2b1a 100%
     );
+    padding: 100px 40px;
+}
+
+.applications-lead {
+    max-width: 720px;
+    margin: 0 auto 8px;
+    text-align: center;
+}
+
+.applications-lead a {
+    color: var(--gold);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .application-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-
     margin-top: 60px;
 }
 
 .application-card {
     padding: 40px 30px;
-
-    text-align: center;
-
+    text-align: left;
     border: 1px solid rgba(201, 168, 76, 0.15);
-
     background: rgba(26, 74, 46, 0.25);
-
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .application-card:hover {
     transform: translateY(-6px);
-
     background: rgba(45, 106, 71, 0.30);
 }
 
 .application-card h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-
+    font-size: 26px;
     color: var(--white);
-
     margin-bottom: 20px;
 }
 
 .application-card p {
     font-size: 14px;
     line-height: 1.8;
-
     color: var(--text-light);
+}
+
+.application-card a {
+    color: var(--gold);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+
+/* ===== SOURCING CAPABILITY ===== */
+
+.products-sourcing {
+    background: var(--green-dark);
+    padding: 100px 40px;
+    text-align: center;
+}
+
+.products-sourcing h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 52px);
+    color: var(--white);
+    margin-bottom: 24px;
+}
+
+.products-sourcing > .container > p {
+    max-width: 760px;
+    margin: 0 auto 48px;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-light);
+}
+
+.capability-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: left;
+}
+
+.capability-item {
+    padding: 28px 24px;
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    background: rgba(26, 74, 46, 0.25);
+}
+
+.capability-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.capability-item p {
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.sourcing-footnote {
+    max-width: 720px;
+    margin: 40px auto 0;
+    font-size: 13px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.62);
 }
 
 
@@ -184,40 +484,41 @@
 
 .product-cta {
     text-align: center;
-
     background: linear-gradient(
         135deg,
         var(--walnut) 0%,
         #2a1505 100%
     );
+    padding: 100px 40px;
 }
 
 .product-cta h2 {
     font-family: 'Cormorant Garamond', serif;
-
     font-size: clamp(36px, 4vw, 52px);
-
     color: var(--white);
-
     margin-bottom: 24px;
 }
 
 .product-cta p {
     max-width: 700px;
-
     margin: 0 auto 40px;
-
     font-size: 15px;
-
     line-height: 1.9;
-
     color: var(--text-light);
-
     font-weight: 300;
 }
 
 .product-cta .btn {
     padding: 16px 40px;
+}
+
+
+/* ===== FOOTER LOGO (products page) ===== */
+
+.products-page .footer-logo {
+    height: 100px;
+    width: auto;
+    margin-bottom: 20px;
 }
 
 
@@ -230,43 +531,56 @@ header nav a.active {
 
 header nav a.active::after {
     content: '';
-
     position: absolute;
-
     bottom: -8px;
     left: 0;
-
     width: 100%;
     height: 2px;
-
     background: var(--gold);
+}
+
+
+/* ===== SPECIES GRADIENT EXTENSIONS ===== */
+
+.meranti .species-bg {
+    background: linear-gradient(160deg, #a86b45, #6e3f28);
+}
+
+.oak .species-bg {
+    background: linear-gradient(160deg, #d8c4a8, #b69474);
 }
 
 
 /* ===== RESPONSIVE DESIGN ===== */
 
 @media (max-width: 992px) {
+    .flagship-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
 
-    .species-detail-grid {
+    .species-detail-grid,
+    .core-detail-grid {
         grid-template-columns: 1fr;
     }
 
-    .application-grid {
+    .application-grid,
+    .ondemand-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .capability-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .products-hero {
         padding-top: 180px;
     }
-
 }
 
-
 @media (max-width: 768px) {
-
     .products-hero {
         min-height: auto;
-
         padding: 180px 30px 100px;
     }
 
@@ -274,38 +588,53 @@ header nav a.active::after {
         font-size: 42px;
     }
 
-    .application-grid {
+    .application-grid,
+    .ondemand-grid,
+    .capability-grid {
         grid-template-columns: 1fr;
     }
 
     .species-detail-card,
-    .application-card {
+    .application-card,
+    .ondemand-card,
+    .capability-item {
         padding: 32px 24px;
     }
 
-}
-
-
-@media (max-width: 576px) {
-
-    .products-hero h1 {
-        font-size: 36px;
-    }
-
-    .products-intro,
-    .featured-species,
+    .products-flagship,
+    .products-core,
+    .products-broader,
+    .products-ondemand,
     .applications,
-    .product-cta {
+    .products-sourcing,
+    .product-cta,
+    .products-intro {
         padding-left: 30px;
         padding-right: 30px;
+    }
+
+    .flagship-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .flagship-actions .btn,
+    .flagship-actions .btn-outline {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .products-hero h1 {
+        font-size: 36px;
     }
 
     .species-detail-card h3 {
         font-size: 30px;
     }
 
-    .application-card h3 {
+    .application-card h3,
+    .ondemand-card h3 {
         font-size: 24px;
     }
-
 }
