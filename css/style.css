@@ -114,7 +114,10 @@ header nav a[aria-current="page"]::after {
             rgba(7,17,14,.28) 65%,
             rgba(7,17,14,.10) 100%
         ),
-        url("../assets/images/hero/arena-clean-v1.jpg");
+        image-set(
+            url("../assets/images/hero/arena-main.webp") type("image/webp"),
+            url("../assets/images/hero/arena-clean-v1.jpg") type("image/jpeg")
+        );
 
     background-size: cover;
     background-position: center center;
@@ -2261,6 +2264,15 @@ header nav a:focus-visible,
 
     .home-page .hero-bg {
         background-position: 57% center;
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(7,17,14,.82) 0%,
+                rgba(7,17,14,.62) 38%,
+                rgba(7,17,14,.28) 65%,
+                rgba(7,17,14,.10) 100%
+            ),
+            url("../assets/images/hero/arena-mobile-master.webp");
     }
 }
 
@@ -2707,5 +2719,54 @@ header nav a {
         flex-wrap: wrap;
         justify-content: flex-end;
         max-width: 100%;
+    }
+}
+
+/* Sprint 4.3 Stage 4 — enquiry form */
+.enquiry-grid {
+    margin-bottom: 20px;
+}
+
+.enquiry-message,
+.enquiry-actions {
+    margin-top: 20px;
+}
+
+.enquiry-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(201, 168, 76, 0.25);
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.enquiry-input option {
+    color: #0d2b1a;
+}
+
+.enquiry-status {
+    margin: 0 0 20px;
+    padding: 14px 16px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.enquiry-status[data-state="success"] {
+    border: 1px solid rgba(201, 168, 76, 0.45);
+    background: rgba(201, 168, 76, 0.12);
+    color: var(--gold-pale);
+}
+
+.enquiry-status[data-state="error"] {
+    border: 1px solid rgba(220, 80, 80, 0.45);
+    background: rgba(220, 80, 80, 0.12);
+    color: #ffd6d6;
+}
+
+@media (max-width: 768px) {
+    .enquiry-actions .btn {
+        width: 100%;
     }
 }
