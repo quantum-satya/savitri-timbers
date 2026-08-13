@@ -469,6 +469,13 @@
     color: var(--green-mid);
 }
 
+.flooring-specs a {
+    color: var(--green-dark);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 
 /* ===== PINE ===== */
 
