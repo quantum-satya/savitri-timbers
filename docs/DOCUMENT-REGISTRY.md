@@ -18,7 +18,7 @@
 | **Reviewer(s)** | Satya Pal |
 | **Approver(s)** | Satya Pal |
 | **Effective Date** | 2026-07-23 |
-| **Last Updated** | 2026-08-08 |
+| **Last Updated** | 2026-08-13 |
 | **Next Review** | Before Phase 3 completion |
 
 ## Registry Philosophy
@@ -126,13 +126,15 @@ Each governed document belongs to exactly one governance domain and one authorit
 | --- | --- | --- | --- | --- | --- | --- |
 | DEV-010 | docs | `SETUP.md` | Development Lead | Approved | 1.0 | 2026-07-07 |
 | DEV-020 | docs | `ENVIRONMENT.md` | Development Lead | Approved | 1.0 | 2026-07-07 |
+| DEV-043 | docs/sprints | `sprints/SPRINT-4.3-MARKET-FLOORING-SOLUTION-ARCHITECTURE-SPEC-v1.1.md` | Development Lead | Approved | 1.1 | 2026-08-12 |
+| DEV-044 | docs/sprints | `sprints/SPRINT-4.3-IMPLEMENTATION-RECORD.md` | Development Lead | Draft | 1.0 | 2026-08-13 |
 
 ## Reference
 
 | Document ID | Folder | Document | Role | Status | Version | Last Updated |
 | --- | --- | --- | --- | --- | --- | --- |
-| REF-000 | docs | `DOCUMENT-REGISTRY.md` | Project Documentation Lead | Approved | 2.0 | 2026-08-08 |
-| REF-001 | docs | `README.md` | Project Documentation Lead | Approved | 1.0 | 2026-08-08 |
+| REF-000 | docs | `DOCUMENT-REGISTRY.md` | Project Documentation Lead | Approved | 2.0 | 2026-08-13 |
+| REF-001 | docs | `README.md` | Project Documentation Lead | Approved | 1.0 | 2026-08-13 |
 | REF-010 | docs | `CONTENT-GUIDE.md` | Content Strategist | Draft | 1.0 |  |
 | REF-020 | docs | `GLOSSARY.md` | Project Documentation Lead | Draft | 1.0 |  |
 | REF-030 | docs | `BRAND-GUIDE.md` | Brand Owner | Review | 1.0 |  |
@@ -141,11 +143,11 @@ Each governed document belongs to exactly one governance domain and one authorit
 
 | Document ID | Folder | Document | Role | Status | Version | Last Updated |
 | --- | --- | --- | --- | --- | --- | --- |
-| OPS-010 | docs | `ROADMAP.md` | Project Manager | Draft | 1.0 | 2026-08-08 |
-| OPS-020 | docs | `CHANGELOG.md` | Development Lead | Draft | 1.0 | 2026-08-08 |
-| OPS-030 | docs | `TODO.md` | Project Manager | Draft | 1.0 |  |
+| OPS-010 | docs | `ROADMAP.md` | Project Manager | Draft | 1.0 | 2026-08-13 |
+| OPS-020 | docs | `CHANGELOG.md` | Development Lead | Draft | 1.0 | 2026-08-13 |
+| OPS-030 | docs | `TODO.md` | Project Manager | Draft | 1.0 | 2026-08-13 |
 | OPS-040 | docs | `DEPLOYMENT.md` | Development Lead | Draft | 1.0 |  |
-| OPS-050 | docs | `PROJECT_STATUS.md` | Project Manager | Approved | 1.0 | 2026-08-08 |
+| OPS-050 | docs | `PROJECT_STATUS.md` | Project Manager | Approved | 1.0 | 2026-08-13 |
 
 ---
 

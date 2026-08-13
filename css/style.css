@@ -2659,6 +2659,46 @@ header nav a {
     outline-offset: 4px;
 }
 
+.home-page .why-card a {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.home-page .why-card a:hover,
+.home-page .why-card a:focus-visible {
+    color: var(--gold-pale);
+}
+
+.home-page .why-card a:focus-visible {
+    outline: 2px solid var(--gold-light);
+    outline-offset: 3px;
+}
+
+.home-page .manufacturing {
+    display: block;
+}
+
+.home-page .manufacturing-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 48px;
+    align-items: center;
+}
+
+.home-page .home-mfg-actions {
+    margin-top: 36px;
+}
+
+@media (max-width: 900px) {
+    .home-page .manufacturing-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .home-page .species-card.pine {
     cursor: default;
 }

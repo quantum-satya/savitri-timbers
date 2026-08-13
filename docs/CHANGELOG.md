@@ -11,7 +11,7 @@ Reviewers:
 Approved By:
 
 
-Last Updated: 2026-08-08
+Last Updated: 2026-08-13
 
 
 ## Purpose
@@ -39,6 +39,23 @@ Related Documents
 ---
 
 # Release History
+
+## Unreleased — Sprint 4.3 (branch `sprint-4-3-baseline`)
+
+**Date:** 2026-08-13  
+**Status:** Implemented locally; not production
+
+Flooring discovery architecture from specification v1.1:
+
+- Sports flooring hub plus Indoor Sports, Maple and Teak pages
+- Homepage and navigation pointed at the hub
+- Technical Resources MVP, sitemap, robots Sitemap line, `/flooring` 301 map
+- Contact enquiry attribution (`mailto:karan@savitriagro.com`) and form success/error UI
+- Homepage Technical Resources teaser and manufacturing process-proof strip
+
+Deferred online-sales capabilities (analytics property, server-side forms, named sport pages, By System, Projects) are listed in `docs/sprints/SPRINT-4.3-IMPLEMENTATION-RECORD.md`.
+
+---
 
 ## v1.3.1 — Production Release
 
