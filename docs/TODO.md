@@ -11,7 +11,7 @@ Reviewers:
 Approved By:
 
 
-Last Updated: 2026-08-13
+Last Updated: 2026-09-10
 
 
 ## Purpose
@@ -40,7 +40,7 @@ Related Documents
 
 ## Sprint 4.3 — deferred (later STDP phase)
 
-Not in current website scope. Do not invent these in Cursor without a new approved specification.
+Sprint 4.3 itself is in production (`origin/main` `b38195b`, PR #5). The items below were **never** part of that ship. Do not invent them without a new approved specification.
 
 - GA4 (or equivalent) property ID and page-view measurement
 - Server-side enquiry handling / CRM

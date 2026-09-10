@@ -11,7 +11,7 @@ Reviewers:
 Approved By:
 
 
-Last Updated: 2026-08-13
+Last Updated: 2026-09-10
 
 
 ## Purpose
@@ -40,10 +40,10 @@ Related Documents
 
 # Release History
 
-## Unreleased — Sprint 4.3 (branch `sprint-4-3-baseline`)
+## Sprint 4.3 — Production (`main`)
 
-**Date:** 2026-08-13  
-**Status:** Implemented locally; not production
+**Date:** 2026-09-10
+**Status:** Merged to `main` (PR #5, merge commit `b38195b`); deployed to Cloudflare Production (https://savitriagro.com). No new git tag was created; last tag remains `v1.3.1`.
 
 Flooring discovery architecture from specification v1.1:
 
@@ -52,8 +52,11 @@ Flooring discovery architecture from specification v1.1:
 - Technical Resources MVP, sitemap, robots Sitemap line, `/flooring` 301 map
 - Contact enquiry attribution (`mailto:karan@savitriagro.com`) and form success/error UI
 - Homepage Technical Resources teaser and manufacturing process-proof strip
+- Final correction `46881d3`: homepage mobile nav wrap; public copy without internal sprint phrasing
 
-Deferred online-sales capabilities (analytics property, server-side forms, named sport pages, By System, Projects) are listed in `docs/sprints/SPRINT-4.3-IMPLEMENTATION-RECORD.md`.
+Implementation commits: `916d773`, `fee9992`, `d85bf9d`, `f728891`, `7dc1f0e`, `46881d3`.
+
+Deferred online-sales capabilities (analytics property, server-side forms, named sport pages, By System, Projects) remain deferred; see `docs/sprints/SPRINT-4.3-IMPLEMENTATION-RECORD.md`.
 
 ---
 

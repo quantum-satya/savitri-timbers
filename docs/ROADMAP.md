@@ -11,7 +11,7 @@ Reviewers:
 Approved By:
 
 
-Last Updated: 2026-08-13
+Last Updated: 2026-09-10
 
 
 ## Purpose
@@ -60,10 +60,10 @@ Phase 3 — Website Implementation
 ▶ Documentation synchronization (Sprint D1)
 ▶ Manufacturing page and business doc alignment (planned)
 
-Sprint 4.x — Website (local `sprint-4-3-baseline`, not production)
+Sprint 4.x — Website
 ✅ Sprint 4.1B manufacturing evidence page (prior)
 ✅ Sprint 4.2 Products and Flooring
-▶ Sprint 4.3 flooring discovery architecture — implemented locally; review/deploy pending
+✅ Sprint 4.3 flooring discovery architecture — merged to `main` (PR #5, `b38195b`, 2026-09-10); Cloudflare Production
 
 Deferred from Sprint 4.3 (later STDP phase; see implementation record):
 - Analytics property / conversion measurement

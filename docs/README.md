@@ -13,7 +13,7 @@ Approved By:
 
 - Satya Pal
 
-Last Updated: 2026-08-13
+Last Updated: 2026-09-10
 
 ---
 
@@ -23,7 +23,7 @@ The Savitri Timbers Digital Platform (STDP) is the digital foundation for Savitr
 
 It follows a documentation-first development model, where business strategy, governance, architecture, and implementation evolve together through a structured review and approval process.
 
-The current production baseline is Version 1.3.1.
+The current production baseline is Sprint 4.3 on `main` (merge commit `b38195b`, PR #5, 2026-09-10). The last git tag remains `v1.3.1`; no newer release tag exists.
 
 ## Purpose
 

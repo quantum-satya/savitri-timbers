@@ -1,14 +1,15 @@
 # Sprint 4.3 Implementation Record
 
 Document ID: DEV-044  
-Version: 1.0  
-Status: Draft (awaiting review)  
+Version: 1.1
+Status: Current (merged to production)
 Sprint: 4.3 — Market & Flooring Solution Architecture  
 Specification: `docs/sprints/SPRINT-4.3-MARKET-FLOORING-SOLUTION-ARCHITECTURE-SPEC-v1.1.md`  
-Branch: `sprint-4-3-baseline`  
-Record date: 2026-08-13
+Implementation branch: `sprint-4-3-baseline`
+Production: `origin/main` merge `b38195b` (PR #5, 2026-09-10)
+Record date: 2026-09-10
 
-This record describes work implemented on the branch. It is not a production-release note. Production remains on the previously deployed site until this branch is reviewed and deployed.
+This record describes the Sprint 4.3 work that is on production `main`. It is not a substitute for the authoritative specification (DEV-043).
 
 ---
 
@@ -27,7 +28,7 @@ It did not introduce an online sales platform, CRM, quotation engine, or analyti
 
 ---
 
-## 2. Implementation stages (local commits)
+## 2. Implementation stages
 
 | Stage | Commit | Scope |
 | --- | --- | --- |
@@ -35,9 +36,11 @@ It did not introduce an online sales platform, CRM, quotation engine, or analyti
 | 2 | `fee9992` | Homepage and site-wide navigation to the flooring hub |
 | 3 | `d85bf9d` | Technical Resources MVP, `_redirects`, `sitemap.xml`, `robots.txt` |
 | 4 | `f728891` | Enquiry attribution, form success/error UI, hero WebP, Technical Resources footer links |
-| 5 | uncommitted at record draft | Homepage Tier 1 proof strip, Technical Resources teaser, this record |
+| 5 | `7dc1f0e` | Homepage Tier 1 proof strip, Technical Resources teaser, this record (v1.0 draft) |
+| Correction | `46881d3` | Homepage mobile nav wrap; public copy without “Sprint 4.2 business specifications” |
+| Merge | `b38195b` | PR #5 into `main` |
 
-Stages 1–4 were not amended.
+Stages 1–5 were not amended. The correction is a new commit on top of `7dc1f0e`.
 
 ---
 
@@ -71,7 +74,7 @@ Primary nav label remains **Flooring Solutions** (existing site language). Foote
 /flooring         /flooring/sports-flooring/    301
 ```
 
-`flooring.html` is a local stub (meta refresh + canonical) because `python3 -m http.server` does not honour Cloudflare `_redirects`. Production 301 behaviour still requires a Cloudflare Pages check after deploy.
+`flooring.html` is a local stub (meta refresh + canonical) because `python3 -m http.server` does not honour Cloudflare `_redirects`. Live production check 2026-09-10: `https://savitriagro.com/flooring.html` returned **301** to `/flooring/sports-flooring/`.
 
 Hash fragments (`#flagship`, `#maple-flooring`, `#teak-flooring`) cannot be redirected by `_redirects`. Internal links now point at the new paths.
 

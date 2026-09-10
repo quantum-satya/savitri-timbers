@@ -10,12 +10,13 @@
 |----------|-------|
 | **Project** | Savitri Timbers Digital Platform (STDP) |
 | **Repository Status** | Active Development |
-| **Production Release** | v1.3.1 |
+| **Last tagged release** | v1.3.1 (July 2026) |
+| **Production on `main`** | Sprint 4.3 — merge `b38195b` (PR #5, 2026-09-10) |
 | **Production URL** | https://savitriagro.com |
 | **Current Phase** | Phase 3 – Website Implementation |
-| **Current Sprint** | Sprint 4.3 — Market flooring architecture (local branch; production remains v1.3.1) |
+| **Current Sprint** | Sprint 4.3 complete in production; deferred items remain out of scope |
 | **Primary Business Goal** | Premium flooring discovery and credibility website; offline-led business |
-| **Last Updated** | 2026-08-13 |
+| **Last Updated** | 2026-09-10 |
 
 ---
 
@@ -39,36 +40,35 @@ The project follows a documentation-first approach where governance, architectur
 - ✅ Phase 3 Sprint 3.1 – Homepage Enhancement
 - ✅ Phase 3 Sprint 3A.4 – Homepage Trust & Credibility
 - ✅ Production Release v1.3.1
+- ✅ Sprint 4.1B manufacturing evidence page
+- ✅ Sprint 4.2 Products and Flooring
+- ✅ Sprint 4.3 Market & Flooring Solution Architecture (merged to `main` via PR #5; deployed to Cloudflare Production)
 
 ---
 
 ## Current Focus
 
-### Sprint 4.3 — Market & Flooring Solution Architecture
+Sprint 4.3 is **not** awaiting deploy. Production `origin/main` is `b38195b`.
 
-Current objective:
+Next work should not invent deferred Sprint 4.3 items. Typical follow-ups:
 
-> Complete local Sprint 4.3 implementation on `sprint-4-3-baseline` for review. Production remains v1.3.1 until deploy.
+- Human/business documentation alignment (catalog, brand chapters, `DEPLOYMENT.md`)
+- Future sprints only from a new approved specification
+- Deferred analytics, CRM, named sport pages, and Projects remain **out of scope** until specified
 
-Primary tasks:
-
-- Human review of Stages 1–5
-- Deploy decision (not started)
-- Deferred analytics, CRM, named sport pages, and Projects remain out of this sprint
-
-Documentation Sprint D1 (v1.3.1 governance sync) is historical and is not the active implementation sprint.
+AI/developer portable briefing: `docs/AI-DEVELOPMENT-HANDOVER.md`.
 
 ---
 
 # Next Planned Work
 
-Following Documentation Sprint D1:
+Not authorized as implementation without new approved docs:
 
 1. Business documentation alignment (homepage content, product catalog)
 2. Architecture information architecture documentation
-3. DEPLOYMENT.md operational guidance
+3. DEPLOYMENT.md operational guidance (still a draft shell)
 4. Brand design system chapter backfill (color, typography, components)
-5. Manufacturing page documentation (Sprint 4.1A work in progress locally)
+5. Deferred Sprint 4.3 capabilities listed in the implementation record and TODO
 
 ---
 
@@ -77,30 +77,32 @@ Following Documentation Sprint D1:
 | Item | Status |
 |------|--------|
 | Governance | ✅ Stable |
-| Documentation | 🚧 Synchronizing with v1.3.1 |
+| Documentation | 🚧 Status docs updated 2026-09-10 for Sprint 4.3 production merge; some older files still mention v1.3.1 as the live baseline |
 | Architecture | ✅ Approved (index); sub-documents pending |
-| Website Implementation | ✅ v1.3.1 deployed; Phase 3 continuing |
+| Website Implementation | ✅ Sprint 4.3 on production `main` |
 
 ---
 
-# Current Branch
+# Current Branch (this clone, 2026-09-10)
 
 ```
-sprint-4-3-baseline (ahead of origin; not pushed)
+sprint-4-3-baseline @ 46881d3 (matches origin/sprint-4-3-baseline)
+origin/main @ b38195b (PR #5 merge; contains 46881d3)
+local main @ 885efbb (behind origin/main — fast-forward before new production work)
 ```
 
-Production continues to track `main` at v1.3.1.
+Production tracks `origin/main`.
 
 ---
 
-# Definition of Done (Current Sprint)
+# Definition of Done (Sprint 4.3)
 
-Sprint 4.3 Stage 5 will be complete when:
+Completed:
 
-- Homepage Technical Resources teaser and Tier 1 process-proof strip are in place
-- Deferred items are recorded in the Sprint 4.3 implementation record and TODO
-- Human review of Stages 1–5 is complete
-- Stage 5 is committed locally (not started until review)
+- Homepage Technical Resources teaser and Tier 1 process-proof strip
+- Deferred items recorded in the Sprint 4.3 implementation record and TODO
+- Stages 1–5 plus final correction committed (`916d773` … `46881d3`)
+- PR #5 merged to `main`
 
 ---
 
@@ -112,9 +114,9 @@ None.
 
 # Notes
 
-Local Sprint 4.3 work is on `sprint-4-3-baseline` and is not production until reviewed and deployed.
-
 Deferred Sprint 4.3 capabilities are listed in `docs/sprints/SPRINT-4.3-IMPLEMENTATION-RECORD.md` and `docs/TODO.md`.
+
+Exact Cloudflare Pages project name and Preview hostname: **UNKNOWN** (not in the repository).
 
 ---
 
