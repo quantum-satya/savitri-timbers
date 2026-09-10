@@ -13,9 +13,9 @@
 | **Production Release** | v1.3.1 |
 | **Production URL** | https://savitriagro.com |
 | **Current Phase** | Phase 3 – Website Implementation |
-| **Current Sprint** | Documentation Sprint D1 – v1.3.1 Production Governance Synchronization |
-| **Primary Business Goal** | Synchronize documentation with v1.3.1 production |
-| **Last Updated** | 2026-08-08 |
+| **Current Sprint** | Sprint 4.3 — Market flooring architecture (local branch; production remains v1.3.1) |
+| **Primary Business Goal** | Premium flooring discovery and credibility website; offline-led business |
+| **Last Updated** | 2026-08-13 |
 
 ---
 
@@ -44,18 +44,19 @@ The project follows a documentation-first approach where governance, architectur
 
 ## Current Focus
 
-### Documentation Sprint D1 – v1.3.1 Production Governance Synchronization
+### Sprint 4.3 — Market & Flooring Solution Architecture
 
 Current objective:
 
-> Synchronize operational and governance documentation with the v1.3.1 production release.
+> Complete local Sprint 4.3 implementation on `sprint-4-3-baseline` for review. Production remains v1.3.1 until deploy.
 
 Primary tasks:
 
-- Populate CHANGELOG with releases through v1.3.1.
-- Close completed Phase 3 homepage sprints in project status and roadmap.
-- Update DECISIONS implementation statuses.
-- Register AI-GOVERNANCE.md and Cursor rules v1 in the Document Registry.
+- Human review of Stages 1–5
+- Deploy decision (not started)
+- Deferred analytics, CRM, named sport pages, and Projects remain out of this sprint
+
+Documentation Sprint D1 (v1.3.1 governance sync) is historical and is not the active implementation sprint.
 
 ---
 
@@ -85,20 +86,21 @@ Following Documentation Sprint D1:
 # Current Branch
 
 ```
-main
+sprint-4-3-baseline (ahead of origin; not pushed)
 ```
+
+Production continues to track `main` at v1.3.1.
 
 ---
 
 # Definition of Done (Current Sprint)
 
-Documentation Sprint D1 will be complete when:
+Sprint 4.3 Stage 5 will be complete when:
 
-- CHANGELOG records all significant releases through v1.3.1.
-- PROJECT_STATUS, ROADMAP, and DECISIONS reflect completed Phase 3 homepage work.
-- DOCUMENT-REGISTRY registers AI-GOVERNANCE.md and `.cursor/rules/v1/`.
-- KNOWLEDGE-HIERARCHY and README reflect current repository structure.
-- Changes are reviewed (not committed until approved).
+- Homepage Technical Resources teaser and Tier 1 process-proof strip are in place
+- Deferred items are recorded in the Sprint 4.3 implementation record and TODO
+- Human review of Stages 1–5 is complete
+- Stage 5 is committed locally (not started until review)
 
 ---
 
@@ -110,11 +112,9 @@ None.
 
 # Notes
 
-Production at v1.3.1 matches the committed `main` branch.
+Local Sprint 4.3 work is on `sprint-4-3-baseline` and is not production until reviewed and deployed.
 
-Local uncommitted work (Manufacturing page) is out of scope for Sprint D1 and remains undocumented until implemented and deployed.
-
-Future documentation should support implementation rather than delay business delivery.
+Deferred Sprint 4.3 capabilities are listed in `docs/sprints/SPRINT-4.3-IMPLEMENTATION-RECORD.md` and `docs/TODO.md`.
 
 ---
 

@@ -11,7 +11,7 @@ Reviewers:
 Approved By:
 
 
-Last Updated: 2026-08-08
+Last Updated: 2026-08-13
 
 
 ## Purpose
@@ -59,6 +59,17 @@ Phase 3 — Website Implementation
 ✅ Production Release v1.3.1
 ▶ Documentation synchronization (Sprint D1)
 ▶ Manufacturing page and business doc alignment (planned)
+
+Sprint 4.x — Website (local `sprint-4-3-baseline`, not production)
+✅ Sprint 4.1B manufacturing evidence page (prior)
+✅ Sprint 4.2 Products and Flooring
+▶ Sprint 4.3 flooring discovery architecture — implemented locally; review/deploy pending
+
+Deferred from Sprint 4.3 (later STDP phase; see implementation record):
+- Analytics property / conversion measurement
+- Server-side enquiry handling
+- Named sport pages, By Flooring System, Projects (Tier 2)
+- Manufacturing video, technical PDFs, sourcing page content
 
 Phase 4
 Customer Portal

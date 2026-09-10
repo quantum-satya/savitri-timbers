@@ -13,7 +13,7 @@ Approved By:
 
 - Satya Pal
 
-Last Updated: 2026-08-08
+Last Updated: 2026-08-13
 
 ---
 
@@ -92,6 +92,7 @@ docs/
 ├── brand/
 ├── business/
 ├── design/
+├── sprints/
 └── releases/
 
 AI governance is additionally implemented through the versioned rule set:
